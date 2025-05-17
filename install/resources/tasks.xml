@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tasks version="1400" exported="">
+	<task>
+		<title>Saatlik Temizlik</title>
+		<description><![CDATA[Eski aramaları, captcha resimlerini, kayıt sorularını ve süresi dolan yönlendirmeleri temizler.]]></description>
+		<file>hourlycleanup</file>
+		<minute>0</minute>
+		<hour>*</hour>
+		<day>*</day>
+		<weekday>*</weekday>
+		<month>*</month>
+		<enabled>1</enabled>
+		<logging>1</logging>
+	</task>
+	<task>
+		<title>Günlük Temizlik</title>
+		<description><![CDATA[Eski oturumları ve okunan konuları temizler.]]></description>
+		<file>dailycleanup</file>
+		<minute>0</minute>
+		<hour>0</hour>
+		<day>*</day>
+		<weekday>*</weekday>
+		<month>*</month>
+		<enabled>1</enabled>
+		<logging>1</logging>
+	</task>
+	<task>
+		<title>Yarım Saatlik Kullanıcı Temizliği</title>
+		<description><![CDATA[Otomatik olarak süresi dolan kullanıcı yasaklarını, uyarıları ve gönderileri askıya alma ve denetleme işlemlerini otomatik olarak temizler.]]></description>
+		<file>usercleanup</file>
+		<minute>30,59</minute>
+		<hour>*</hour>
+		<day>*</day>
+		<weekday>*</weekday>
+		<month>*</month>
+		<enabled>1</enabled>
+		<logging>1</logging>
+	</task>
+	<task>
+		<title>Haftalık Yedekleme</title>
+		<description><![CDATA[MyBB tablolarınızı otomatik olarak yedekleme dizininize yedekler.]]></description>
+		<file>backupdb</file>
+		<minute>0</minute>
+		<hour>0</hour>
+		<day>*</day>
+		<weekday>0</weekday>
+		<month>*</month>
+		<enabled>0</enabled>
+		<logging>1</logging>
+	</task>
+	<task>
+		<title>Terfi Sistemi</title>
+		<description><![CDATA[Terfi sistemini her 20 dakikada bir otomatik olarak çalıştırır.]]></description>
+		<file>promotions</file>
+		<minute>5,25,45</minute>
+		<hour>*</hour>
+		<day>*</day>
+		<weekday>*</weekday>
+		<month>*</month>
+		<enabled>1</enabled>
+		<logging>1</logging>
+	</task>
+	<task>
+		<title>Konu Görüntülenme Sayacı</title>
+		<description><![CDATA[Konu görüntülenme sayacını her 15 dakikada bir otomatik olarak günceller. Bu görev, 'Konu Görüntüleme Sayacının Güncellenmesini Ertele' ayarı değiştirildiğinde otomatik olarak etkinleştirilecek veya devre dışı bırakılacaktır.]]></description>
+		<file>threadviews</file>
+		<minute>10,25,40,55</minute>
+		<hour>*</hour>
+		<day>*</day>
+		<weekday>*</weekday>
+		<month>*</month>
+		<enabled>0</enabled>
+		<logging>1</logging>
+	</task>
+	<task>
+		<title>Tablo Kontrolü</title>
+		<description><![CDATA[Otomatik olarak bir tablo kontrolü çalıştırır ve hatalı tabloları onarmaya çalışır.]]></description>
+		<file>checktables</file>
+		<minute>0</minute>
+		<hour>*</hour>
+		<day>*</day>
+		<weekday>*</weekday>
+		<month>*</month>
+		<enabled>0</enabled>
+		<logging>1</logging>
+	</task>
+	<task>
+		<title>Kayıtları Temizle</title>
+		<description><![CDATA[Eski MyBB kayıt dosyalarını otomatik olarak temizler (admin kayıtları, moderatör kayıtları, görev aracı kayıtları, terfi sistemi kayıtları ve e-posta kayıtları).]]></description>
+		<file>logcleanup</file>
+		<minute>21</minute>
+		<hour>5</hour>
+		<day>*</day>
+		<weekday>*</weekday>
+		<month>*</month>
+		<enabled>1</enabled>
+		<logging>1</logging>
+	</task>
+	<task>
+		<title>Toplu E-Posta Sistemi</title>
+		<description><![CDATA[Kuyruğa alınmış toplu postaları her 15 dakikada bir otomatik olarak gönderir.]]></description>
+		<file>massmail</file>
+		<minute>10,25,40,55</minute>
+		<hour>*</hour>
+		<day>*</day>
+		<weekday>*</weekday>
+		<month>*</month>
+		<enabled>1</enabled>
+		<logging>1</logging>
+	</task>
+	<task>
+		<title>Kullanıcı Temizleme</title>
+		<description><![CDATA[Kullanıcıları her gün 'Kullanıcı Temizleme Sistemi Seçenekleri' ile belirlenen kriterlere göre otomatik olarak temizler.]]></description>
+		<file>userpruning</file>
+		<minute>0</minute>
+		<hour>2</hour>
+		<day>*</day>
+		<weekday>*</weekday>
+		<month>*</month>
+		<enabled>1</enabled>
+		<logging>1</logging>
+	</task>
+	<task>
+		<title>Bekleyen Moderasyonlar</title>
+		<description><![CDATA[Her 24 saatte bir otomatik olarak bekleyen moderasyon eylemlerini gerçekleştirir.]]></description>
+		<file>delayedmoderation</file>
+		<minute>0</minute>
+		<hour>0</hour>
+		<day>*</day>
+		<weekday>*</weekday>
+		<month>*</month>
+		<enabled>1</enabled>
+		<logging>1</logging>
+	</task>
+	<task>
+		<title>Sürüm Kontrolü</title>
+		<description><![CDATA[Haberleri ve MyBB'nin yeni sürümlerini her gün otomatik olarak kontrol eder.]]></description>
+		<file>versioncheck</file>
+		<minute>0</minute>
+		<hour>0</hour>
+		<day>*</day>
+		<weekday>*</weekday>
+		<month>*</month>
+		<enabled>1</enabled>
+		<logging>1</logging>
+	</task>
+    <task>
+        <title>CSS Dosyalarını Yeniden Önbellekleme</title>
+        <description><![CDATA[Küçültülmüş/sıkıştırılmış still dosyaları dahil olmak üzere tüm CSS dosyalarını yeniden önbelleğe alınmasını sağlar.]]></description>
+        <file>recachestylesheets</file>
+        <minute>0</minute>
+        <hour>0</hour>
+        <day>1</day>
+        <weekday>0</weekday>
+        <month>0</month>
+        <enabled>0</enabled>
+        <logging>1</logging>
+    </task>
+    <task>
+        <title>Bekleyen E-Postaları İlet</title>
+        <description><![CDATA[Gönderilmeyi bekleyen e-postaları her dakika gönderir.]]></description>
+        <file>sendmailqueue</file>
+        <minute>*</minute>
+        <hour>*</hour>
+        <day>*</day>
+        <weekday>*</weekday>
+        <month>*</month>
+        <enabled>1</enabled>
+        <logging>1</logging>
+    </task>
+</tasks>

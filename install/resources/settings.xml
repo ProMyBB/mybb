@@ -1,0 +1,2680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings version="1809">
+	<settinggroup name="onlineoffline" title="Forum Açık / Kapalı" description="Bu ayarlar, forumlarınızı genel olarak çevrimiçi veya çevrimdışı hale getirmenize ve forumu neden kapattığınız ile ilgili bir neden belirtmenize olanak tanır." disporder="1"  isdefault="1">
+		<setting name="boardclosed">
+			<title>Forum Kapalı</title>
+			<description><![CDATA[Bazı değişiklikler yapmak veya bir yükseltme gerçekleştirmek için forumunuzu kapatmanız gerekiyorsa, bu genel bir kapatmadır. Ziyaretçileriniz forumlarınızı görüntüleyemeyecek, ancak aşağıda belirttiğiniz nedeni içeren bir mesaj göreceklerdir. Süper Admin ve Admin yetkisine sahip yöneticiler forumu görüntülemeye devam edebilecektir.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="boardclosed_reason">
+			<title>Forumu Kapatma Nedeni</title>
+			<description><![CDATA[Forumunuz kapalıysa, ziyaretçilerinizin forumlarınızı ziyaret ettiklerinde görebilecekleri bir mesajı burada ayarlayabilirsiniz. Dil dosyasında ki mesajı kullanmak için bunu boş bırakabilirsiniz.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[textarea]]></optionscode>
+			<settingvalue><![CDATA[Bu forum şu anda bakım nedeniyle kapalıdır. Lütfen daha sonra tekrar kontrol edin.]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="details" title="Site Detayları" description="Bu bölüm, forum adınız ve url'nizin yanı sıra web sitenizin adı ve url'si gibi çeşitli ayarları içerir." disporder="2" isdefault="1">
+		<setting name="bbname">
+			<title>Forum Adı</title>
+			<description><![CDATA[Topluluğunuzun adı. Bunun 75 karakterden fazla olmamasını tavsiye ederiz.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[Forums]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="bburl">
+			<title>Forum URL</title>
+			<description><![CDATA[Forumunuzun URL adresi.<br />https:// ya da http:// adresini ekleyin. Sonuna eğik çizgi (/) EKLEMEYİN!]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="homename">
+			<title>Ana Sayfa Adı</title>
+			<description><![CDATA[Ana sayfanızın adı. Bu, footer kısmında iletişim bağlantısının yanında görünecektir.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="homeurl">
+			<title>Ana Sayfa URL'si</title>
+			<description><![CDATA[Ana sayfanızın tam URL'si. Bu, yukarıda belirttiğiniz ana sayfa adına verilecek olan bağlantıyı içerir.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[/]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="adminemail">
+			<title>Yönetici E-Postası</title>
+			<description><![CDATA[Yöneticinin e-posta adresi. Bu, iletişim formu aracılığıyla gönderilen/giden e-postalar için kullanılacaktır.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="returnemail">
+			<title>Geri Dönüş E-Postası</title>
+			<description><![CDATA[İletişim formu ve diğer forumlar aracılığıyla gönderilen/giden e-postalara gelen yanıtlar için kullanılacak e-posta adresi ve no-reply hesaplar için kullanışlıdır. Bunun yerine yönetici e-posta adresini kullanmak için boş bırakın.]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="contactemail">
+			<title>İletişim E-Postası</title>
+			<description><![CDATA[İletişim formu (contact.php) aracılığıyla gönderilen mesajların iletileceği e-posta adresi. Bunun yerine yönetici e-posta adresini kullanmak için boş bırakın.]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="contactlink">
+			<title>Bize Ulaşın Linki</title>
+			<description><![CDATA[Bu, tüm forum sayfalarının altındaki Bize Ulaşın bağlantısı için kullanılacaktır. Bir e-posta adresi (mailto:email@website.com kullanılarak) veya bir link (./contact.php) olabilir.]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="cookiedomain">
+			<title>Çerez [Cookie] Etki Alanı (Domain) </title>
+			<description><![CDATA[Çerezlerin ayarlanması gereken alan adı. Bu varsayılan değerde kalabilir. Ayrıca bir . ile başlamalıdır, böylece tüm alt alan adlarını kapsar. <br /> Eğer bir alt alan adına ve alt klasöre MyBB'yi kurduysanız eğer ve oturum açma/kayıt sorunları yaşıyorsanız bu ayarı aşağıda ki örnekleri inceleyerek yapılandırmanız gerekiyor.<br />
+			<p><strong>Örnek:</strong> Eğer, MyBB'yi etki alanınıza (domain) doğrudan kurduysanız <strong>.siteadi.com</strong> şeklinde ayarlanmalıdır. Bu ana dizin yolunuzdur.</p>
+			<p><strong>Örnek 2:</strong> Eğer, MyBB'yi bir alt alandına kurduysanız <strong>.forum.siteadi.com</strong> şeklinde alt alan adına göre ayarlanmadır. Bu alt alan adı dizin yolunuzdur.</p>
+			<p><strong>Örnek 3:</strong> Eğer, MyBB'yi bir klasörün içerisine kurduysanız <strong>.siteadi.com/klasöradi</strong> şeklinde alt klasöre göre ayarlanmalıdır. Bu alt klasörünüzün yoludur.</p>
+			<p>MyBB'yi nasıl kurduysanız Çerez [Cookie] Etki Alanı (Domain) ayarınıda ona göre yapılandıracaksınız. Bu değerler ilk kurulum sırasında MyBB tarafından tespit edilen değerlerdir.</p>
+			]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="cookiepath">
+			<title>Çerez [Cookie] Yolu</title>
+			<description><![CDATA[Çerezlerin ayarlandığı yol. Bu ayarın değiştirilmemesini ve eğik çizgi (/ slash) olarak kalmasını şiddetle tavsiye ederiz. Yukarıda etki alanında bahsettiğimiz örneklere göre bu kısım ayarlanmalıdır. Eğer bir alt klasöre kurduysanız ilgili ayar /forum olarak ayarlanmalıdır. Aksi takdirde forumunuzda oturum açma/ kayıt işlemlerinde sorun yaşayabilirsiniz. ]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[/]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="cookieprefix">
+			<title>Çerez [Cookie] Ön Eki</title>
+			<description><![CDATA[MyBB tarafından ayarlanan tüm çerezlere eklenecek bir ön ek. Bu, bir etki alanına MyBB'nin birden fazla kopyasını yüklemek istiyorsanız veya MyBB'deki çerezlerin adlarıyla çakışan başka bir yazılım yüklüyse kullanışlıdır. Belirtilmezse, hiçbir ön ek kullanılmayacaktır. *Boş bırakılması tavsiye edilir.]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="cookiesamesiteflag">
+			<title>SameSite Çerez Bayrağı</title>
+			<description><![CDATA[Kimlik doğrulama çerezleri CSRF saldırılarını önlemek için SameSite değerini taşıyacaktır. Çapraz kaynaklı POST istekleri bekliyorsanız bunu devre dışı bırakın. Ayarın varsayılan değerde bırakılması tavsiye edilir.]]></description>
+			<disporder>12</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="cookiesecureflag">
+			<title>Güvenli Çerez [Cookie] Bayrağı</title>
+			<description><![CDATA[Çerezler, şifrelenmemiş bağlantılar üzerinden gönderilmelerini önlemek için Güvenli çerez bayrağı ile ayarlanabilir. <strong>Bu ayarı yalnızca forumunuz HTTPS altında düzgün çalışıyorsa etkinleştirmelisiniz.</strong>]]></description>
+			<disporder>13</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showvernum">
+			<title>MyBB Versiyonunu Göster</title>
+			<description><![CDATA[MyBB'de sürüm numaralarının herkese açık olarak gösterimini açmanızı veya kapatmanızı sağlar.]]></description>
+			<disporder>14</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="mailingaddress">
+			<title>COPPA Posta Adresi</title>
+			<description><![CDATA[Bir fiziksel posta adresiniz varsa, buraya o posta adresini girin. Bu, COPPA uyumluluk formunda gösterilir.]]></description>
+			<disporder>15</disporder>
+			<optionscode><![CDATA[textarea]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="faxno">
+			<title>COPPA Fax Numarası</title>
+			<description><![CDATA[Bir faks numaranız varsa, buraya girin. Bu, COPPA uyumluluk formunda gösterilir.]]></description>
+			<disporder>16</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="general" title="Genel Yapılandırma" description="Bu bölüm forumunuzun genel yapısını yapılandırmanızı sağlar." disporder="3" isdefault="1">
+		<setting name="bblanguage">
+			<title>Varsayılan Dil</title>
+			<description><![CDATA[Forumunuzu ziyaret eden ve kayıt olan kullanıcılarınız için varsayılan forum dilini ayarlayabilirsiniz. Burada ki dil özel olarak başka bir dil tercih etmemiş kullanıcılar için geçerli olacaktır.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[language]]></optionscode>
+			<settingvalue><![CDATA[turkish]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="captchaimage">
+			<title><![CDATA[CAPTCHA Güvenlik Kodu Kullanımı]]></title>
+			<description><![CDATA[Forumunuza üye kayıt sırasında ve konu/yorum gönderimi sırasında spam üyelikler ve spam bot gönderileri engellemek amacıyla kullanılan CAPTCHA'yı buradan aktif edebilirsiniz. <br />Seçtiğiniz CAPTCHA hizmetine göre farklı ayarlamalar yapmanız gerekiyor. CAPTCHA ayarları hakkında daha fazla bilgi için lütfen <a href="https://mybb.pro" rel="noopener" target="_blank" title="MyBB Türkçe Destek Forumu">MyBB Türkçe Destek</a> sitesini ziyaret edin.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[select
+0=CAPTCHA Yok
+1=MyBB Varsayılan CAPTCHA
+4=NoCAPTCHA reCAPTCHA v2
+5=reCAPTCHA v2 Görünmez
+6=hCaptcha
+7=hCaptcha Görünmez
+8=reCAPTCHA v3]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="recaptchapublickey">
+			<title><![CDATA[reCAPTCHA Public Key]]></title>
+			<description><![CDATA[Google tarafından size sağlanan reCAPTCHA genel anahtarınız.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="recaptchaprivatekey">
+			<title><![CDATA[reCAPTCHA Private Key]]></title>
+			<description><![CDATA[Google tarafından size sağlana reCAPTCHA özel anahtarınız.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="recaptchascore">
+			<title><![CDATA[reCAPTCHA v3 Score]]></title>
+			<description><![CDATA[reCAPTCHA v3 için kullanıcı reddetme puanını ayarlayın. 1.0 büyük olasılıkla gerçek bir kullanıcıdır, 0.0 büyük olasılıkla bir bottur. Bu değerin varsayılan değerde bırakılması tavsiye edilir.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[numeric
+min=0
+max=1
+step=0.01]]></optionscode>
+			<settingvalue><![CDATA[0.5]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hcaptchapublickey">
+			<title><![CDATA[hCaptcha Public Key]]></title>
+			<description><![CDATA[hCaptcha tarafından sağlanan genel anahtarınız.]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hcaptchaprivatekey">
+			<title><![CDATA[hCaptcha Private Key]]></title>
+			<description><![CDATA[hCaptcha tarafından sağlanan özel anahtarınız.]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hcaptchatheme">
+			<title><![CDATA[hCaptcha Teması]]></title>
+			<description><![CDATA[hCaptcha Widget'ının temasını ayarlayın. Varsayılan olarak <storng>light</storng> teması ayarlıdır.]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[select
+light=Light
+dark=Dark]]></optionscode>
+			<settingvalue><![CDATA[light]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hcaptchasize">
+			<title><![CDATA[hCaptcha Boyutu]]></title>
+			<description><![CDATA[hCaptcha Widget'ının boyutunu ayarlayın.]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[select
+normal=Normal
+compact=Compact]]></optionscode>
+			<settingvalue><![CDATA[normal]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="reportmethod">
+			<title>Rapor Edilen İçeriklerin Bildirim Metodu</title>
+			<description><![CDATA[Lütfen içerik bildirildiğinde moderatörlerin nasıl bilgilendirilmesini istediğinizi listeden seçin. <strong>Not:</strong> Moderatörler yalnızca yönettikleri forumlardaki gönderiler için bildirimler alırlar ve süper moderatör ve adminler ise tüm rapor edilen içerikler hakkında bilgilendirilirler.]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[radio
+db=Yalnızca Mod KP'de Göster
+pms=Özel Mesaj Olarak Gönder ve Mod KP'de Göster
+email=E-Posta Yoluyla Gönder ve Mod KP'de Göster]]></optionscode>
+			<settingvalue><![CDATA[db]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="decpoint">
+			<title>Ondalık Birim</title>
+			<description><![CDATA[Bölgenizde kullandığınız ondalık birimi belirtin. Varsayılan olarak kalması önerilir.]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[.]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="thousandssep">
+			<title>Binler Sayısal Ayırıcısı</title>
+			<description><![CDATA[Binler sayısal ayırıcı için kullanmak istediğiniz noktlama işareti. Örneğin, ilgili ayar kısmına "," işareti koymanız halinde forumunuzda 1200 rakamı 1,200 olarak gösterilecektir. Varsayılan değer olan virgül değerinde kalması tavsiye edilir.]]></description>
+			<disporder>12</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[,]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showlanguageselect">
+			<title>Footer'da Dil Seçimini Göster</title>
+			<description><![CDATA[Forumunuzdaki tüm sayfaların footer (alt kısm) kısmında dil seçim alanını göstermek istemiyorsanız Hayır olarak ayarlayın. Forumunuzda yalnızca bir tane dil yüklüyse bu ayar göz ardı edilecektir.]]></description>
+			<disporder>13</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showthemeselect">
+			<title>Footer'da Tema Seçimini Göster</title>
+			<description><![CDATA[Forumunuzdaki tüm sayfaların footer (alt kısım) kısmında tema seçim alanını göstermek istemiyorsanız Hayır olarak ayarlayın.]]></description>
+			<disporder>14</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxmultipagelinks">
+			<title>Sayfalandırmada Maksimum Sayfa Limiti</title>
+			<description><![CDATA[Burada, birden fazla sonuç sayfası olan konu başlıkları veya forumlar için sayfalandırmada gösterilecek sonraki ve önceki sayfa bağlantılarının sayısını ayarlayabilirsiniz. Sınırlamayı devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>15</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[5]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="jumptopagemultipage">
+			<title>Sayfalandırmada Sayfaya Atla Kutusunu Göster</title>
+			<description><![CDATA[Sayfa sayısı "Sayfalandırmada Maksimum Sayfa Limiti"ni aşarsa sayfalandırma sonunda bir "Sayfaya Atla" kutusu göstermek istiyor musunuz?]]></description>
+			<disporder>16</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="no_plugins">
+			<title>Tüm Eklentileri Devre Dışı Bırak</title>
+			<description><![CDATA[Bunu Evet olarak ayarlamak, tüm eklentileri kaldırmadan devre dışı bırakır. Bu, ./inc/init.php dosyasının üst kısmında NO_PLUGINS'i manuel olarak tanımlamaya eşdeğerdir.<br /> Bu ayar genelikle MyBB sürüm yükseltmesi yaptığınız sırada kullanışlıdır. Eklentilerin çalışması durudurulur ve yaptığınız eklenti ayarlanız saklanır. Eklentileri tekrar etkinleştirdiğinizde tüm ayarlarınız olduğu gibi geri gelecektir.]]></description>
+			<disporder>17</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="deleteinvites">
+			<title>Eski Grup Davetlerinin Kullanım Süresi</title>
+			<description><![CDATA[Kullanıcı gruplarına gelen katılma talepleri kaç gün sonra geçersiz kalacağını bu kısımdan belirleyebilirsiniz. Süreyi sınırsız olarak ayarlamak isyorsanız aşağıda ki değeri 0 olarak ayarlayın.]]></description>
+			<disporder>18</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[180]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="redirects">
+			<title>Sayfa Yönlendirmeleri</title>
+			<description><![CDATA[Bu, kullanıcıyı doğrudan sayfaya yönlendirmek yerine daha anlaşılır yönlendirme sayfalarını etkinleştirecektir.<br /> Kullanıcılar sitenizde bir işlem yaptığında o işlemin ardından çıkan yönlendirme pencereleridir. Örneğin; Forum hesabınıza giriş yaptığınızda karşınıza çıkan giriş yönlendirme penceresi gibi.]]></description>
+			<disporder>19</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="enableforumjump">
+			<title>Forum Atlama Menüsü Etkinleştirilsin mi?</title>
+			<description><![CDATA[Forum atlama menüsü forum ve konu görünümü sayfalarında gösterilir. Çok sayıda forumunuz varsa sunucunuza önemli miktarda yük ekleyebilir. devre dışı bırakmak için 'Hayır' olarak ayarlayın.]]></description>
+			<disporder>20</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="server" title="Sunucu ve Optimizasyon Seçenekleri" description="Bu seçenekler, sunucunuzdaki yükü azaltmanıza ve forumunuzda daha iyi performans elde etmenize olanak tanıyan çeşitli sunucu ve optimizasyon tercihlerini ayarlamanıza olanak tanır." disporder="4" isdefault="1">
+		<setting name="seourls">
+			<title>Arama Motoru Dostu SEF URL'ler Etkinleştirilsin Mi?</title>
+			<description><![CDATA[Arama motoru dostu URL'ler, MyBB bağlantılarını arama motorlarının tercih ettiği ve yazması daha kolay olan daha kısa URL'lere dönüştürür. Örneğin: showthread.php?tid=1 url'si thread-1.html şeklini alır. <strong>Bu ayar etkinleştirildikten sonra, MyBB kök dizininizde (veya web sunucunuz için eşdeğer bir dizinde) .htaccess'inizin bulunduğundan emin olmanız gerekir. Otomatik olarak algılama tüm sunucularda çalışmayabilir.</strong><br />Daha fazla <strong><a href="https://mybb.pro/forum-mybb-seo" rel="noopener" target="_blank" title="MyBB SEO Eklentisi">MyBB SEO seçenekleri için tıklayın.</a></strong>]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[select
+auto=Otomatik Algılama
+yes=Etkinleştir
+no=Devre Dışı Bırak]]></optionscode>
+			<settingvalue><![CDATA[auto]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="seourls_archive">
+			<title>Arşiv İçin Arama Motoru Dostu SEF URL'ler Etkinleştirilsin Mi?</title>
+			<description><![CDATA[Arşivde arama motoru dostu URL'ler kullanılabilir. <strong>Bu ayar etkinleştirildikten sonra arşivin beklendiği gibi çalıştığından emin olun.</strong>]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="gzipoutput">
+			<title>GZip Sayfa Sıkıştırması Kullanılsın Mı?</title>
+			<description><![CDATA[Sayfalarınız tarayıcıya gönderildiklerinde GZip formatında sıkıştırmak mı istiyorsunuz? Bu, ziyaretçileriniz için siteniz daha hızlı açılır ve bu da sizin için daha az trafik kullanımı anlamına gelir.<br /> GZip sıkıştırması bazı sunucularda çalışmayabilir. Sunucu sağlayıcınız ile iletişime geçerek GZip sıkıştırması için gerekli olan sunucu modülleri aktif mi değil mi öğrenin.<br/>Genellikle tüm web hosting sağlayıcılarında GZip aktif olur ancak yine de kontrol etmekte fayda var.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="gziplevel">
+			<title>GZip Sayfa Sıkıştırma Seviyesi</title>
+			<description><![CDATA[GZip Sayfa Sıkıştırma için seviyeyi 0-9 arasında ayarlayın.  (0=sıkıştırma yok, 9=maksimum sıkıştırma). Çoğu kurulum için 4 seviyesi tavsiye edilir.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[numeric
+min=0
+max=9]]></optionscode>
+			<settingvalue><![CDATA[4]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="nocacheheaders">
+			<title>Önbellek Üstbilgisi Gönderme</title>
+			<description><![CDATA[Bu seçenekle dinamik sayfaların tarayıcılar tarafından yeniden doğrulanmasını ve proxy'ler tarafından önbelleğe alınmamasını zorunlu kılabilirsiniz.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="load">
+			<title>*NIX Yük Sınırlama</title>
+			<description><![CDATA[Forumunuza gelen insanları reddetmeden önce maksimum sunucu yükünü sınırlayın. Sınırlama olmaması için 0 değerini girebilirsiniz. Önerilen Sınır Değeri: 5.0'dır. <br /> Bu ayarı aktif ettikten sonra çok fazla kullanıcı trafiği var ise bazı kullanıcılarınız sunucu tarafından bekleme sırasına alınacak ve siteyi kullanamayacaklardır ve kullanıcılarınıza bilinmeyen bir hata oluştu adında bir hata kodu gösterilecektir.<br /> Bu ayar özellikle DDos saldırısı altında olduğunuz zaman işe yarayacaktır. Bot kullanıcıların isteklerini reddetmek ve sunucunun gelen isteklere vereceği cevap miktarını sınırlandırmak DDos saldırılarını hafifletecektir. <u>DDos saldırılarını durdurmaz!</u>]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="tplhtmlcomments">
+			<title>Tema Şablonlarının Başlangıç/Bitiş Etiketleri Gösterilsin Mi?</title>
+			<description><![CDATA[Bu, HTML sayfa kaynağında tema şablonlarının başlangıç/bitiş yorumlarının çıktısının gösterilmesini etkinleştirir veya devre dışı bırakır.]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="use_xmlhttprequest">
+			<title>XMLHttp Ajax İstekleri Etkinleştirilsin Mi?</title>
+			<description><![CDATA[Bu, XMLHttp ajax istekleri özelliklerini etkinleştirir veya devre dışı bırakır. Varsayılan değerde bırakılması tavsiye edilir.<br /> Bu ayar özellikle konu/gönderilerde bulunan "Hızlı Cevap" kısmında ki dinamik yüklemeler için kullanılır.]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="extraadmininfo">
+			<title>Gelişmiş İstatistikler / Hata Ayıklama (Debug) Gösterilsin Mi?</title>
+			<description><![CDATA[Forumunuzun ana sayfasında ve  tüm sayfaların altında Sunucu yükünü, sayfa oluşturma süresini, sunucu bellek kullanımını vb. gösterir. Bu bilgileri yalnızca yöneticilerin görebileceğini lütfen unutmayın.]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="uploadspath">
+			<title>Dosya Yükleme Dizin Yolu</title>
+			<description><![CDATA[Tüm forum dosya yüklemeleri için kullanılan yoldur. <b> CHMOD değeri 777</b> olmalıdır (*nix sunucularında). Varsayılan değer: "./uploads" (varsayılan yükleme dizini).]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[./uploads]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="useerrorhandling">
+			<title>MyBB Hata İşlemesini Kullanın</title>
+			<description><![CDATA[MyBB için entegre hata işleme özelliğini kullanmak istemiyorsanız, bu seçeneği kapatabilirsiniz. Ancak, açık kalması tavsiye edilir.]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="errorlogmedium">
+			<title>Hata Kayıtlarını Saklama Metodu</title>
+			<description><![CDATA[Kullanılacak hata işleme ve saklama metodu. Bu kısımda seçeceğiniz saklama metodu sayesinde sitenizde karşılaşılan hataları bir dosyada saklayabilir ve bunları manuel olarak tespit edip, düzeltebilirsiniz. Bu seçenek sitenizde ki hataların tespiti için kullanışlı bir araç olacaktır. ]]></description>
+			<disporder>12</disporder>
+			<optionscode><![CDATA[select
+none=Hiçbiri
+log=Hata Kayıtları
+email=E-Posta Hata Kayıtları
+both=Bütün Hata Kayıtları
+]]></optionscode>
+			<settingvalue><![CDATA[none]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="errortypemedium">
+			<title>Hata Kayıtlarının Gösterim Şekli</title>
+			<description><![CDATA[Forumunuzda karşılaşılan hataların nasıl görüntüleneceğini buradan seçebilirsiniz. Bu ayar tüm kullanıcılar için geçerli olacaktır.Hata ve Uyarı mesajlarının gösterilmesi seçeneği seçilir ise hata mesajı ve uyarı mesajlarında veritabanı adı ve veritabanınız ile ilgili diğer bilgiler, php sürümünüz ve sunucuz hakkında detaylı bilgiler herkesin görebileceği şekilde gösterilebilir.<br /><strong>Bu ayarın Uyarı ve Hataları Gizle olarak ayarlanması güvenlik açısından şiddetle tavsiye edilir.</strong> Bu seçeneği seçmeniz halinde hata ve uyarı kayıtlarınız sitenizin ana dizininde <strong>./error.log</strong> adında bir dosya oluşturulup, bu dosya içerisine kayıt edilecektir. Aynı zamanda forum bilgileri kısmında Yönetici E-Postası kısmında girdiğiniz e-posta adresine de mail olarak iletilecektir.]]></description>
+			<disporder>13</disporder>
+			<optionscode><![CDATA[select
+warning=Uyarıları Göster
+error=Hataları Göster
+both=Uyarı ve Hataları Göster
+none=Uyarı ve Hataları Gizle
+]]></optionscode>
+			<settingvalue><![CDATA[none]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="errorloglocation">
+			<title>Hata Kayıtlarının Dosya Yolu</title>
+			<description><![CDATA[Forumunuzda oluşan hata ve uyarı kayıtlarının tutulduğu dosya yoludur ve dilerseniz bu dosyanın adını ve yolunu aşağıdaki metin kutusundan değiştirebilirsiniz.]]></description>
+			<disporder>14</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[./error.log]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="ip_forwarded_check">
+			<title>Kullanıcının IP Adresini Kontrol Et</title>
+			<description><![CDATA[Bir kullanıcının IP adresini HTTP_X_FORWARDED_FOR veya HTTP_X_REAL_IP başlıkları için kontrol etmek istiyor musunuz? Emin değilseniz, bunu <strong>Hayır</strong> olarak ayarlayın.]]></description>
+			<disporder>15</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="minifycss">
+			<title>CSS Dosyalarını Küçült/Sıkıştır</title>
+			<description><![CDATA[Css dosyalarını sıkıştırarak küçültmek mi istiyorsunuz? Evet'i seçmek bant genişliğinden tasarruf sağlayabilir ve genel olarak daha hızlı sayfa yüklemeleri sağlayabilir. Bu ayarın <strong>"Evet"</strong> olarak seçilmesi tavsiye edilir.]]></description>
+			<disporder>16</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="usecdn">
+			<title>CDN Aktif Edilsin Mi?</title>
+			<description><![CDATA[Stil Sayfaları (CSS), JavaScript ve Görseller gibi statik dosyaların yüklenmesini ve ana sunucunuz üzerinde ki yükünü azaltmak için bir CDN (İçerik Dağıtım Ağı) Hizmeti kullanabilirsiniz. Bu işlevi etkinleştirmek istiyor musunuz?]]></description>
+			<disporder>17</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="cdnurl">
+			<title>CDN Statik Dosyalar İçin Kullanılacak URL</title>
+			<description><![CDATA[Yukarıdaki CDN seçeneğini etkinleştirdiyseniz, lütfen statik içeriğin sunulacağı temel URL'yi girin. Bu, sonda eğik çizgi (/) içermeyen geçerli bir URL olmalıdır.]]></description>
+			<disporder>18</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="cdnpath">
+			<title>CDN Statik Dosyalarının Depolanacağı Dizin Yolu </title>
+			<description><![CDATA[Yukarıdaki CDN seçeneğini etkinleştirdiyseniz, lütfen isteğe bağlı olarak statik dosyaları depolamak için tam bir dizin yolu girin. Bu yalnızca "Push" tipi CDN'ler veya yerel alt alan adı kurulumları için kullanışlıdır. Bu yolun sonunda eğik çizgi (/) olmamalıdır.]]></description>
+			<disporder>19</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+	</settinggroup>
+	<settinggroup name="datetime" title="Tarih ve Saat Ayarları" description="Burada, forumlarda tarih ve saatleri görüntülemek için kullanılan farklı tarih ve saat biçimlerini belirleyebilirsiniz." disporder="5" isdefault="1">
+		<setting name="dateformat">
+			<title>Tarih Formatı</title>
+			<description><![CDATA[Forumda kullanılan tarihlerin formatı. Bu biçim PHP'nin date() işlevini kullanır. Ne yaptığınızı bilmiyorsanız bunu değiştirmemenizi öneririz.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[d-m-Y]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="timeformat">
+			<title>Saat Formatı</title>
+			<description><![CDATA[Forumda kullanılan saatlerin formatı. Bu biçim PHP'nin date() işlevini kullanır. Ne yaptığınızı bilmiyorsanız bunu değiştirmemenizi öneririz.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[H:i]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="datetimesep">
+			<title>Tarih/Saat Ayırıcı</title>
+			<description><![CDATA[MyBB tarih ve saat formatlarını birleştirdiğinde, bu ayar onları ayırmak için kullanılır (tipik olarak bir boşluk veya virgül kullanılır).]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[, Saat:]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="regdateformat">
+			<title>Üye Kayıt Tarih Formatı</title>
+			<description><![CDATA[Kullanıcının ne zaman kaydolduğunu gösteren showthread'de [Konu Gösterimi] kullanılan format.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[d-m-Y]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="timezoneoffset">
+			<title>Varsayılan Saat Dilimi</title>
+			<description><![CDATA[Burada, varsayılan saat dilimini kullanarak misafirler ve üyeler için varsayılan saat dilimini ayarlayabilirsiniz.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[php
+<select name=\"upsetting[{$setting['name']}]\">
+<option value=\"-12\" ".($setting['value'] == -12?"selected=\"selected\"":"").">GMT -12:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -12).")</option>
+<option value=\"-11\" ".($setting['value'] == -11?"selected=\"selected\"":"").">GMT -11:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -11).")</option>
+<option value=\"-10\" ".($setting['value'] == -10?"selected=\"selected\"":"").">GMT -10:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -10).")</option>
+<option value=\"-9.5\" ".($setting['value'] == -9.5?"selected=\"selected\"":"").">GMT -9:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -9.5).")</option>
+<option value=\"-9\" ".($setting['value'] == -9?"selected=\"selected\"":"").">GMT -9:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -9).")</option>
+<option value=\"-8\" ".($setting['value'] == -8?"selected=\"selected\"":"").">GMT -8:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -8).")</option>
+<option value=\"-7\" ".($setting['value'] == -7?"selected=\"selected\"":"").">GMT -7:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -7).")</option>
+<option value=\"-6\" ".($setting['value'] == -6?"selected=\"selected\"":"").">GMT -6:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -6).")</option>
+<option value=\"-5\" ".($setting['value'] == -5?"selected=\"selected\"":"").">GMT -5:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -5).")</option>
+<option value=\"-4.5\" ".($setting['value'] == -4.5?"selected=\"selected\"":"").">GMT -4:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -4.5).")</option>
+<option value=\"-4\" ".($setting['value'] == -4?"selected=\"selected\"":"").">GMT -4:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -4).")</option>
+<option value=\"-3.5\" ".($setting['value'] == -3.5?"selected=\"selected\"":"").">GMT -3:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -3.5).")</option>
+<option value=\"-3\" ".($setting['value'] == -3?"selected=\"selected\"":"").">GMT -3:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -3).")</option>
+<option value=\"-2\" ".($setting['value'] == -2?"selected=\"selected\"":"").">GMT -2:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -2).")</option>
+<option value=\"-1\" ".($setting['value'] == -1?"selected=\"selected\"":"").">GMT -1:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -1).")</option>
+<option value=\"0\" ".($setting['value'] == 0?"selected=\"selected\"":"").">GMT (".my_date($mybb->settings['timeformat'], TIME_NOW, 0).")</option>
+<option value=\"+1\" ".($setting['value'] == 1?"selected=\"selected\"":"").">GMT +1:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 1).")</option>
+<option value=\"+2\" ".($setting['value'] == 2?"selected=\"selected\"":"").">GMT +2:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 2).")</option>
+<option value=\"+3\" ".($setting['value'] == 3?"selected=\"selected\"":"").">GMT +3:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 3).")</option>
+<option value=\"+3.5\" ".($setting['value'] == 3.5?"selected=\"selected\"":"").">GMT +3:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 3.5).")</option>
+<option value=\"+4\" ".($setting['value'] == 4?"selected=\"selected\"":"").">GMT +4:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 4).")</option>
+<option value=\"+4.5\" ".($setting['value'] == 4.5?"selected=\"selected\"":"").">GMT +4:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 4.5).")</option>
+<option value=\"+5\" ".($setting['value'] == 5?"selected=\"selected\"":"").">GMT +5:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 5).")</option>
+<option value=\"+5.5\" ".($setting['value'] == 5.5?"selected=\"selected\"":"").">GMT +5:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 5.5).")</option>
+<option value=\"+5.75\" ".($setting['value'] == 5.75?"selected=\"selected\"":"").">GMT +5:45 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 5.75).")</option>
+<option value=\"+6\" ".($setting['value'] == 6?"selected=\"selected\"":"").">GMT +6:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 6).")</option>
+<option value=\"+6.5\" ".($setting['value'] == 6.5?"selected=\"selected\"":"").">GMT +6:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 6.5).")</option>
+<option value=\"+7\" ".($setting['value'] == 7?"selected=\"selected\"":"").">GMT +7:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 7).")</option>
+<option value=\"+8\" ".($setting['value'] == 8?"selected=\"selected\"":"").">GMT +8:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 8).")</option>
+<option value=\"+8.5\" ".($setting['value'] == 8.5?"selected=\"selected\"":"").">GMT +8:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 8.5).")</option>
+<option value=\"+8.75\" ".($setting['value'] == 8.75?"selected=\"selected\"":"").">GMT +8:45 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 8.75).")</option>
+<option value=\"+9\" ".($setting['value'] == 9?"selected=\"selected\"":"").">GMT +9:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 9).")</option>
+<option value=\"+9.5\" ".($setting['value'] == 9.5?"selected=\"selected\"":"").">GMT +9:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 9.5).")</option>
+<option value=\"+10\" ".($setting['value'] == 10?"selected=\"selected\"":"").">GMT +10:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 10).")</option>
+<option value=\"+10.5\" ".($setting['value'] == 10.5?"selected=\"selected\"":"").">GMT +10:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 10.5).")</option>
+<option value=\"+11\" ".($setting['value'] == 11?"selected=\"selected\"":"").">GMT +11:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 11).")</option>
+<option value=\"+11.5\" ".($setting['value'] == 11.5?"selected=\"selected\"":"").">GMT +11:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 11.5).")</option>
+<option value=\"+12\" ".($setting['value'] == 12?"selected=\"selected\"":"").">GMT +12:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 12).")</option>
+<option value=\"+12.75\" ".($setting['value'] == 12.75?"selected=\"selected\"":"").">GMT +12:45 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 12.75).")</option>
+<option value=\"+13\" ".($setting['value'] == 13?"selected=\"selected\"":"").">GMT +13:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 13).")</option>
+<option value=\"+14\" ".($setting['value'] == 14?"selected=\"selected\"":"").">GMT +14:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 14).")</option>
+</select>]]></optionscode>
+			<settingvalue><![CDATA[+3]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="dstcorrection">
+			<title>Yaz / Kış Saati Uygulaması (DST)</title>
+			<description><![CDATA[Saatler bir saat fazlaysa ve saat diliminiz doğru seçilmişse, gün ışığından yararlanma saati düzeltmesini etkinleştirin.]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+<settinggroup name="mailsettings" title="Mail Ayarları" description="Bu bölüm, MyBB e-posta sisteminin PHP Mail ile veya ana sunucu dışı bir SMTP Mail sunucusu ile e-posta gönderme gibi çeşitli ayarları kontrol etmenizi sağlar." disporder="6" isdefault="1">
+		<setting name="mail_handler">
+			<title>Mail İşleyicisi</title>
+			<description><![CDATA[MyBB'nin giden e-postaları göndereceği mail işleyicisini aşağıdan seçin. <br /> Bazı hosting sağlayıcıları PHP Mail işleyicisinin spam mail saldırılarını durdurmak için kullanımını yasaklamış olabilir, bu durumda SMTP mail işlemcisini kullanmanız gerekiyor.<br /><b>Mail sorunları yaşamamanız için <a href="https://mybb.pro" rel="noopener" target="_blank" title="MyBB Türkçe Destek Forumu">MyBB Pro</a> olarak SMTP mail işlemcisini kullanmanızı tavsiye ediyoruz.</b>]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[select
+mail=PHP Mail
+smtp=SMTP Mail]]></optionscode>
+			<settingvalue><![CDATA[mail]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="smtp_host">
+			<title>SMTP Sunucu Adı</title>
+			<description><![CDATA[E-Postaların gönderileceği SMTP sunucusunun adı (hostname). <em>Örnek:</em> <strong>mail.siteadiniz.com, smtp.gmail.com</strong> vb.<br />Yalnızca Mail İşlemcisi olarak <u>SMTP Mail</u> seçildiğinde gereklidir.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="smtp_port">
+			<title>SMTP Portu</title>
+			<description><![CDATA[E-Postaların gönderileceği SMTP sunucusunun bağlantı port numarası.<em>Örnek:</em> 25, 465, 587 <br />Yalnızca Mail İşleyicisi olarak SMTP Mail seçildiğinde gereklidir.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="smtp_user">
+			<title>SMTP Kullanıcı Adı</title>
+			<description><![CDATA[SMTP sunucusuyla kimlik doğrulaması yapmak için kullanılan kullanıcı adı.<em>Örnek:</em> info@siteadiniz.com, smtp@siteadiniz.com, mail@sunucuadı.com vb. <br />Yalnızca Mail İşleyicisi olarak SMTP Mail seçilmişse ve SMTP sunucusu kimlik doğrulaması gerektiriyorsa gereklidir.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="smtp_pass">
+			<title>SMTP Şifresi</title>
+			<description><![CDATA[SMTP sunucusuyla kimlik doğrulaması yapmak için kullanılacak şifre.<br />Yalnızca Mail İşleyicisi olarak SMTP Mail seçilmişse ve SMTP sunucusu kimlik doğrulaması gerektiriyorsa gereklidir.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[passwordbox]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="secure_smtp">
+			<title>SMTP Şifreleme Modu</title>
+			<description><![CDATA[SMTP sunucusu ile iletişim kurmak için gereken şifreleme modunu seçin.<br />Yalnızca Mail İşleyicisi olarak SMTP Mail seçildiğinde gereklidir.]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[select
+0=Şifreleme Yok
+1=SSL Şifrelemesini Kullan
+2=TLS Şifrelemesini Kullan]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="mail_parameters">
+			<title>PHP'nin mail() işlevi için Ek Parametreler</title>
+			<description><![CDATA[<strong>Desteklenmiyor!</strong> Bu parametleri ayarlamak için <a href="https://docs.mybb.com/1.8/faq/mail/#additional-parameters-for-phps-mail" target="_blank" rel="noopener">Yapılandırma Dosyası</a>nı kullanmanız gerekiyor. Yapılandırma dosyası aracılığı ile ek php mail parametlerini ekleyebilirsiniz. <u>Bu kısıma ekleyeceğiniz parametreler çalışmayacaktır!</u>]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="mail_logging">
+			<title>Mail Kayıt Türü</title>
+			<description><![CDATA[Bu ayar, 'Konuyu Arkadaşına Gönder' özelliği aracılığıyla gönderilen giden e-postaların nasıl kaydedileceğini ayarlamanıza olanak tanır. Bazı ülkelerde tüm mail içeriğini kaydetmek yasa dışıdır.]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[select
+0=Kayıt Devre Dışı
+1=İçerik Hariç Mail Kayıtlarını Kaydet
+2=Her Şeyi Kaydet]]></optionscode>
+			<settingvalue><![CDATA[2]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="mail_message_id">
+			<title>Mail Başlıkları İçin Kimlik Bilgisi (ID) Ekle</title>
+			<description><![CDATA[Bazı paylaşımlı hosting/sunucularda bu seçeneğin devre dışı bırakılması, forum e-postalarının spam olarak işaretlenmesiyle ilgili sorunları çözer. Forumunuzdan giden e-postaların direkt spam klasörlerine düşmesini istemiyorsanız bu ayarı açık olarak ayarlamanızı tavsiye ederiz.]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="mail_queue_limit">
+			<title>Toplu E-Posta Görev Aracı İle Gönderilecek Mail Sayısı</title>
+			<description><![CDATA[Toplu E-Posta Gönderme görev aracı her çalıştığında kaç adet e-posta gönderilmesini istiyorsunuz? Burada belirleyeceğiniz sayı yüksek olması halinde e-postaların gönderildiği sunucuya ve ana sunucuya yüklenen yükü artıracaktır. Sunucunuzun performansına göre bu ayarı yapılandırmanızı tavsiye ederiz.]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="forumhome" title="Forum Ana Sayfa Ayarları [Index]" description="Bu bölüm, forumunuzun forum ana sayfasında (index.php) kullanılan farklı özellikleri etkinleştirme ve devre dışı bırakma gibi çeşitli ayarları yönetmenize olanak tanır." disporder="7" isdefault="1">
+		<setting name="showdescriptions">
+			<title>Forum Açıklamalarını Göster?</title>
+			<description><![CDATA[Bu seçenek, forumlar için açıklamaların gösterilmesini veya kapatılmasına olanak tanır.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="subforumsindex">
+			<title>Ana Sayfada Gösterilecek Alt Forum Sayısı</title>
+			<description><![CDATA[Ana sayfa (index) ve forum görüntüleme sayfalarındaki forumların içinde gösterilmesini istediğiniz alt forum sayısı. Alt forum listesini tamamen kapatmak için 0 olarak ayarlayın.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[5]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="subforumsstatusicons">
+			<title>Alt Forum Durum Simgelerini Göster?</title>
+			<description><![CDATA[Bir alt forumda yeni gönderi olup olmadığını gösteren simgeler gösterilsin mi?  Alt forumların dizinde görüntülenmesini etkinleştirmediğiniz sürece bunun herhangi bir etkisi olmayacaktır.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hideprivateforums">
+			<title>Özel Forumları Gizle?</title>
+			<description><![CDATA[Bu seçeneği açarak özel forumları gizleyebilirsiniz. Bu seçenek aynı zamanda forum atlamasındaki forumları ve tüm alt forumları da gizler.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="modlist">
+			<title>Forumların Moderatör Listesi</title>
+			<description><![CDATA[Burada index.php ve forumdisplay.php'de her forum için moderatörlerin listelenmesini açabilir veya kapatabilirsiniz.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showbirthdays">
+			<title>Bugün Doğum Günleri Olanları Göster?</title>
+			<description><![CDATA[Bugün doğum günü olan kullanıcıların forum ana sayfasında göstermek ister misiniz?]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showbirthdayspostlimit">
+			<title>Yalnızca x Adet Gönderisi Olanların Doğum Günlerini Göster</title>
+			<description><![CDATA[Yalnızca en az aşağıdaki miktarda gönderisi olan kullanıcıların bügün doğum günleri olanlar listesinde görüntülenmesini seçebilirsiniz. İlgili ayara 0 değeri girildiğinde, bugün doğum günü olan tüm kullanıcıları gösterecektir.]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showwol">
+			<title>Kimlerin Çevrimiçi Olduğunu Göster?</title>
+			<description><![CDATA[Forum ana sayfasında o anda forumda aktif olan kullanıcıların gösterilmesini ya da gösterilmemesini buradan belirleyebilirsiniz.]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showindexstats">
+			<title>Forum İstatistikleri Bölümünü Göster</title>
+			<description><![CDATA[Toplam konu, gönderi, üye sayısını ve forum ana sayfasında en son kayıt olan üyeyi göstermek istiyor musunuz?]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showforumviewing">
+			<title>X Kişi Görüntülüyor Özelliği Aktif Edilsin Mi?</title>
+			<description><![CDATA[Her forumu görüntüleyen o anda aktif olan kullanıcıları görüntüler.]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="forumdisplay" title="Forum Görüntüleme Seçenekleri [Forumdisplay]" description="Bu bölüm, forumunuzda forum gösterimi (forumdisplay.php) için kullanılan farklı özellikleri etkinleştirme ve devre dışı bırakma gibi çeşitli ayarları yönetmenize olanak tanır." disporder="8" isdefault="1">
+		<setting name="threadsperpage">
+			<title>Sayfa Başına Gösterilecek Konu Sayısı</title>
+			<description><![CDATA[Forum görüntüleme sayfasında sayfa başına görüntülenecek konu sayısını bu alanda belirtebilirsiniz.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[20]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hottopic">
+			<title>Sıcak Konu İçin Gereken Yanıt Sayısı</title>
+			<description><![CDATA[Bir konunun 'sıcak konu' olarak kabul edilmesi için gereken yanıt sayısı.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[20]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hottopicviews">
+			<title>Sıcak Konu İçin Gereken Görüntülenme Sayısı</title>
+			<description><![CDATA[Bir konunun 'sıcak konu' olarak kabul edilmesi için gereken görüntülenme sayısı.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[150]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="usertppoptions">
+			<title>Sayfa Başına Kullanıcı Tarafından Seçilebilir Konu Sayısı</title>
+			<description><![CDATA[Kullanıcıların bir forumda sayfa başına kaç konu gösterileceğini seçmelerine izin vermek istiyorsanız, virgülle ayırarak seçebilecekleri seçenekleri girin. Bu alan boş bırakılırsa, sayfa başına kaç konu gösterileceğini seçemezler.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[10,15,20,25,30,40,50]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="dotfolders">
+			<title>'Nokta' Simgesi Kullanılsın Mı?</title>
+			<description><![CDATA[Kullanıcıların dahil olduğu (yorum yaptığı, kendisine ait gönderiler) konuların konu göstergelerinde 'nokta' simgesini göstermek istiyor musunuz?]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowthreadratings">
+			<title>Konu Değerlendirmesi Aktif Edilsin Mi?</title>
+			<description><![CDATA[Kullanıcıların açılan konuları değerlendirmesine izin vermek istiyor musunuz?]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="browsingthisforum">
+			<title>Foruma Göz Atan Kullanıcılar Gösterilsin Mi?</title>
+			<description><![CDATA[Burada 'bu foruma göz atan kullanıcılar' özelliğini açıp/kapatabilirsiniz.]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="announcementlimit">
+			<title>Duyuru Limiti</title>
+			<description><![CDATA[Forum görüntüleme sayfalarındaki konu listesinde gösterilecek forum duyurularının sayısı. Duyuruları tamamen devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[2]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="readparentforums">
+			<title>Ana Forumları Okundu Olarak Zorla İşaretle</title>
+			<description><![CDATA[Evet olarak ayarlandığında, bu ayar okunmamış gönderi kalmadığında bir alt forumun üst forumlarını okundu olarak işaretlemeye çalışacaktır. Lütfen bu ayarın performansta düşüşe ve çoklu veritabanı sorgularına yol açabileceğini ve bu nedenle deneysel olarak ele alınması gerektiğini unutmayın.]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="showthread" title="Konu Gösterim Seçenekleri [Showthread]" description="Bu bölüm, forumunuzun konu görüntüleme sayfasında (showthread.php) kullanılan farklı özellikleri etkinleştirme ve devre dışı bırakma gibi çeşitli ayarları yönetmenize olanak tanır." disporder="9" isdefault="1">
+		<setting name="postlayout">
+			<title>Gönderi (Postbit) Düzeni</title>
+			<description><![CDATA[Klasik ve yatay düzen modları arasında geçiş yapmanızı sağlar. Klasik modda yazar bilgileri yazının solunda, yatay modda ise yazının üstünde gösterilir.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[radio
+horizontal=Yatay Gönderi (Postbit) Düzeni
+classic=Klasik Gönderi (Postbit) Düzeni (Dikey)]]></optionscode>
+			<settingvalue><![CDATA[horizontal]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postsperpage">
+			<title>Sayfa Başına Gönderi Sayısı:</title>
+			<description><![CDATA[Sayfa başına görüntülenecek gönderi sayısı. Forumunuzun aşırı yavaşlamaması için bu değerin 20'den yüksek olmamasını öneririz. Sunucunuzun yüklenecek ekstra bu yükü kaldırabileceğini düşünüyorsanız bu değeri istediğiniz kadar yükseltebilirsiniz.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="userpppoptions">
+			<title>Sayfa Başına Kullanıcı Tarafından Seçilebilir Gönderi Sayısı</title>
+			<description><![CDATA[Kullanıcıların bir konu listesinde sayfa başına kaç gönderi gösterileceğini seçmelerine izin vermek istiyorsanız, virgülle ayırarak seçebilecekleri gönderi sayısı seçeneklerini girin. Bu alan boş bırakılırsa, sayfa başına kaç gönderi gösterileceğini seçemezler.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[5,10,15,20,25,30,40,50]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postmaxavatarsize">
+			<title>Gönderilerdeki Maksimum Avatar Boyutu</title>
+			<description><![CDATA[Konu ve gönderilerde kullanılacak olan avatarların maksimum boyutlarını buradan belirleyebilirsiniz (GenişlikxYükseklik olarak ya da Genişlik|Yükseklik olarak iki farklı şekilde ayarlanabilir). Burada belirlenen avatar boyutundan büyük avatar resimleri otomatik olarak yeniden boyutlandırılacaktır.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[55x55]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="threadreadcut">
+			<title>Konu Okunma Bilgileri Kaç Gün Veritabanında Saklansın?</title>
+			<description><![CDATA[Konu okuma bilgilerini veritabanında tutmak istediğiniz gün sayısı. Büyük forumlarda bu değerin yüksek olması forumun yavaş çalışmasına sebebiyet verebileceğinden ötürü bu değerinden yüksek tutulmasını öneriyoruz. Bu özelliği devre dışı bırakmak için 0 değerini girebilirsiniz.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[7]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="threadusenetstyle">
+			<title>Usenet Tarzı Konu Görünümü</title>
+			<description><![CDATA[Evet'in seçilmesi, gönderilerin USENET'te nasıl görünüyorsa forumunuzda ki gönderilerin de benzer şekilde görünmesine neden olacaktır. Hayır seçeneği ise gönderilerin modern şekilde görünmesini sağlar.]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="quickreply">
+			<title>Hızlı Yanıt Bölümü Gösterilsin Mi?</title>
+			<description><![CDATA[Hızlı yanıt bölümünün konuların altında gösterilip gösterilmeyeceğini ayarlamanızı sağlar.]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="multiquote">
+			<title>Çoklu Alıntı Butonları Gösterilsin Mi?</title>
+			<description><![CDATA[Çoklu alıntı butonu, kullanıcıların bir dizi gönderi seçmesine ve ardından Yanıtla'ya tıklayarak bu gönderilerin mesajlarında alıntılanmasına olanak tanır.]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showsimilarthreads">
+			<title>'Benzer Konular' Tablosunu Göster</title>
+			<description><![CDATA[Benzer Konular tablosu, okunmakta olan konu ile ilgili benzer konuları sayfa sonunda gösterir. Alaka düzeyini aşağıdan ayarlayabilirsiniz.]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="similarityrating">
+			<title>Benzer Konular Alaka Düzeyi</title>
+			<description><![CDATA[Bu, benzer konuları daha alakalı olanlarla sınırlandırmanıza olanak tanır (0 değeri alakalı değildir). Bu sayı 10'dan fazla olmamalı ve büyük forumlar için en düşük (<5) olarak ayarlanmamalıdır. PgSQL veritabanları için geçerli değildir.]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="similarlimit">
+			<title>Benzer Konular Limiti</title>
+			<description><![CDATA[Burada, benzer konular tablosunda gösterilecek benzer konuların sayısını değiştirebilirsiniz. 56k ve üzeri kullanıcısı olan forumlar için 15'in üzerinde bir değerde olmaması önerilir.]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showforumpagesbreadcrumb">
+			<title>Multipage Dropdown Forum Aracı Gösterilsin Mi?</title>
+			<description><![CDATA[Forumda 1 sayfadan fazla konu varsa, breadcrumbs (navigasyon) bir açılır sayfa şeklinde bir menü görüntülemek istiyor musunuz?]]></description>
+			<disporder>12</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="browsingthisthread">
+			<title>Bu Konuyu Okuyan Kullanıcılar Özelliği Aktif Edilsin Mi?</title>
+			<description><![CDATA[Burada 'Bu Konuyu Okuyan Kullanıcılar' özelliğini açıp/kapatabilirsiniz.]]></description>
+			<disporder>13</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="delayedthreadviews">
+			<title>Konu Görüntüleme Sayacının Güncellenmesini Ertele</title>
+			<description><![CDATA[Bu ayar etkinleştirilirse, konular için konu görüntüleme sayacı görev erteleme sistemi tarafından arka planda güncellenecektir. Etkinleştirilmezse, konu görüntüleme sayaçları anında artırılır.]]></description>
+			<disporder>14</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="threadviews_countspiders">
+			<title>Örümcek/Bot Ziyaretleri Konu Görüntüleme Sayacına Dahil Edilsin Mi?</title>
+			<description><![CDATA[Burada, örümcekler/botlar tarafından yapılan görüntülemeleri konu görüntüleme sayacına dahil edebilirsiniz. Google arama botu, yandex arama botu vb botların konu görüntüleme sayacına bir kullanıcı gibi işlenmesini istiyorsanız evet seçeneğini seçebilirsiniz. <br /> Ancak, bu ayarın <strong>Hayır</strong> olarak seçilmesini tavsiye ediyoruz.]]></description>
+			<disporder>15</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="threadviews_countguests">
+			<title>Ziyaretçiler Konu Görüntüleme Sayacına Dahil Edilsin Mi?</title>
+			<description><![CDATA[Burada, forumu ziyaret eden kayıtsız kullanıcıların konu görüntülemelerini konu görüntüleme sayacına dahil edebilirsiniz. Sitenize kayıt olmamış, ziyaretçi olarak bulunan kullanıcıların sayaca dahil edilmesini sağlar.]]></description>
+			<disporder>16</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="threadviews_countthreadauthor">
+			<title>Konu Sahibinin Ziyaretleri Konu Görüntüleme Sayacına Dahil Edilsin Mi?</title>
+			<description><![CDATA[Burada, konuyu paylaşan kullanıcının açtığı konuya yaptığı her ziyareti konu görüntüleme sayacına dahil edilmesini istiyor musunuz? Evet seçilir ise konu açan kullanıcı açtığı konuyu her ziyaret ettiğinde konu görüntüleme sayacına yansıtılacaktır.]]></description>
+			<disporder>17</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="member" title="Giriş ve Kayıt Seçenekleri" description="Burada kullanıcı hesabı kaydı ve oturum açma yönetimi ile ilgili çeşitli ayarları kontrol edebilirsiniz." disporder="10" isdefault="1">
+		<setting name="disableregs">
+			<title>Üye Kayıtları Durdurulsun Mu? </title>
+			<description><![CDATA[Forumunuzda üye kayıtlarını durdurmak veya tekrar üye kayıtlarını açmak için bu ayarı kullanabilirsiniz.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="regtype">
+			<title>Üye Kayıt Yöntemi</title>
+			<description><![CDATA[Lütfen kullanıcılar kayıt olurken kullanılacak üye kayıt yöntemini seçin.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[select
+instant=Anında Aktivasyon
+verify=E-Posta Doğrulaması Gönder
+randompass=Rastgele Şifre Gönder
+admin=Yönetici Onaylı
+both=E-Posta Doğrulaması & Yönetici Onaylı]]></optionscode>
+			<settingvalue><![CDATA[verify]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="awactialert">
+			<title>Aktivasyon Bekleyenler Bildirimi</title>
+			<description><![CDATA[Etkinleştirilmeyi bekleyen hesaplar hakkında yöneticilere bir bildirim göstermek istiyor musunuz?]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="forcelogin">
+			<title>Kullanıcıları Giriş Yapmaya Zorla</title>
+			<description><![CDATA[Bunu Evet olarak ayarlamak, forumunuzu ziyaret eden kullanıcılara foruma erişmek için giriş yapmaya veya kayıt olmaya zorlayacaktır.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="minnamelength">
+			<title>Minimum Kullanıcı Adı Uzunluğu</title>
+			<description><![CDATA[Bir ziyaretçinin üye kayıt formunda kullanıcı adı tercihinde seçeceği kullanıcı adının minimum karakter uzunluğunu buradan belirleyebilirsiniz.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[3]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxnamelength">
+			<title>Maksimum Kullanıcı Adı Uzunluğu</title>
+			<description><![CDATA[Bir ziyaretçinin üye kayıt formunda kullanıcı adı tercihinde seçeceği kullanıcı adının maksimum karakter uzunluğunu buradan belirleyebilirsiniz.]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[30]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="minpasswordlength">
+			<title>Minimum Şifre Uzunluğu</title>
+			<description><![CDATA[Bir ziyaretçinin üye kayıt formunda kullanıcı hesap şifresini belirlerken bu şifrenin sahip olabileceği minimum karakter sayısı.]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[6]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxpasswordlength">
+			<title>Maksimum Şifre Uzunluğu</title>
+			<description><![CDATA[Bir ziyaretçinin üye kayıt formunda kullanıcı hesap şifresini belirlerken bu şifrenin sahip olabileceği maksimum karakter sayısı.]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[30]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="requirecomplexpasswords">
+			<title>Karmaşık Şifre Gerekli Mi?</title>
+			<description><![CDATA[Kullanıcıların karmaşık şifreler kullanmasını mı istiyorsunuz? Karmaşık şifreler büyük harf, küçük harf ve bir sayı gerektirir. <strong>Kullanıcıların hesap güvenliği için bu ayarın "Evet" olarak seçilmesini şiddetle tavsiye ederiz.</strong>]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="betweenregstime">
+			<title>Kayıtlar Arası Süre</title>
+			<description><![CDATA[Aynı IP adresi altında zaten bir hesap açmış olan kullanıcıların tekrar hesap kayıtlarına izin verilmeyeceği süre (saat cinsinden). Devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[24]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxregsbetweentime">
+			<title>IP Adresi Başına Maksimum Üye Kayıt Limiti</title>
+			<description><![CDATA[Bu seçenek, belirli bir kullanıcının yukarıda belirtilen zaman dilimi içinde <u>aynı IP adresiyle</u> maksimum kaç kez kaydolabileceğini ayarlamanıza olanak tanır.]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[2]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowmultipleemails">
+			<title><![CDATA[Aynı E-Posta Adresi ile Birden Fazla Kayıt Yapılsın Mı?]]></title>
+			<description><![CDATA[Kullanıcıların aynı e-posta adresi ile birden fazla kez üyelik hesabı oluşturmasına izin vermek istiyorsanız Evet'i seçin, aksi takdirde Hayır'ı seçin.]]></description>
+			<disporder>12</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="emailkeep">
+			<title>Yasaklı E-Posta Kullanımına İzin Verilsin Mi?</title>
+			<description><![CDATA[Forumunuzda yasaklı e-posta adresine sahip bir kullanıcı var ise bu e-posta adresini kullanıcı hesabında kullanmasına izin vermek istiyorsanız Evet'i seçin, aksi takdirde Hayır'ı seçin.]]></description>
+			<disporder>13</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hiddencaptchaimage">
+			<title>Gizli Bir CAPTCHA Göster</title>
+			<description><![CDATA[Üye kayıt formunda spam bot üyeliklerini engellemek adına gizli bir güvenlik görseli eklensin mi? Gizli CAPTCHA arkaplanda işlev gören, gerçek kullanıcılar için sorun teşkil etmeyen bir spam üyelik korumasıdır. <br />Ancak, özel yapım temalarda Gizli CAPTCHA özelliğini destekleyen kodlar kaldırılabildiği için bazı temalarda bu özellik çalışmayabilir ve gerçek kullanıcılar da dahil olmak üzere üye kayıtları gerçekleşmeyebilir.<br /> Bu özelliği aktif ettikten sonra forumunuzda üye kayıtlarında sorun yaşanıyor ise kullandığınız varsayılan temanızın bu özelliği desteklemediğini bilmelisiniz.]]></description>
+			<disporder>14</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hiddencaptchaimagefield">
+			<title>Gizli CAPTCHA Alan İsmi</title>
+			<description><![CDATA[Gizli CAPTCHA alanınız için aşağıda bir isim seçebilirsiniz. Bu HTML kodunda kullanılmak üzere kullanılan bir parametredir.Sadece rakam ve harf kullanılabilir, özel karakterler ve simgeler kullanamazsınız.]]></description>
+			<disporder>15</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[blockspam3]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="usereferrals">
+			<title>Kullanıcı Referans Sistemi Etkinleştirilsin Mi?</title>
+			<description><![CDATA[Forumunuza kayıt olmak için gelen bir kullanıcı bir başka forum üyeniz tarafından davet edildiyse bunu belirtmesi için kayıt formunda gösterilmek üzere "Referans Bilgisi" bölümü aktif edilsin mi?]]></description>
+			<disporder>16</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="referralsperpage">
+			<title>Sayfa Başına Gösterilecek Referanslar</title>
+			<description><![CDATA[Referanslar sayfasında, sayfa başına kaç tane referans kullanıcısın listelenmesini istiyorsanız buradan belirleyebilirsiniz. ]]></description>
+			<disporder>17</disporder>
+			<optionscode><![CDATA[numeric]]></optionscode>
+			<settingvalue><![CDATA[20]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="coppa">
+			<title>COPPA Çocuk Koruması Aktif Edilsin Mi?</title>
+			<description><![CDATA[COPPA, forumunuza belirli bir yaş sınırında ki çocukların kayıt olup olamayacaklarını belirlemenizi sağlayan bir kontrol sistemidir. Sitenize 13 yaşından daha küçük kullanıcıların ebeveynlerin izni ile kayıt olmasını istiyorsanız bu ayarı aktif edebilirsiniz. COPPA ile kayıt olan kullanıcılar ebeyvnlerin izin formunu size göndermeleri gerekmektedir.<br />Daha fazla bilgi için <a href="https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/childrens-online-privacy-protection-rule" target="_blank" rel="noopener" title="Çocukların Çevrimiçi Gizliliğini Koruma Kuralı">COPPA</a> sayfasını inceleyebilirsiniz.]]></description>
+			<disporder>18</disporder>
+			<optionscode><![CDATA[select
+enabled=Etkinleştir
+deny=13 Yaşın Altındakileri Reddet
+disabled=Devre Dışı Bırak]]></optionscode>
+			<settingvalue><![CDATA[disabled]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="username_method">
+			<title>İzin Verilen Giriş/Oturum Açma Yöntemleri</title>
+			<description><![CDATA[Kullanıcı adı alanı için izin vermek istediğiniz oturum açma yöntemleri. Sadece kullanıcı adı, sadece e-posta veya her ikisine de izin verebilirsiniz.
+<br />E-Posta ile Giriş Yapılsın seçeneğinin aktif olabilmesi için kullanıcıların geçerli ve doğrulamış bir e-posta adresine sahip olmaları ve e-posta adreslerini gizlememiş olmaları gerekir.]]></description>
+			<disporder>19</disporder>
+			<optionscode><![CDATA[select
+0=Sadece Kullanıcı Adıyla Giriş Yapılsın
+1=Sadece E-Posta Adresiyle Giriş Yapılsın
+2=Kullanıcı Adı veya E-Posta İle Giriş Yapılabilsin]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="failedcaptchalogincount">
+			<title>Doğrulama Aşaması İçin Kaç Tane Başarısız Oturum Açma Girişimi Olmalı?</title>
+			<description><![CDATA[Forumunuzda kullanıcı hesabına giriş yapmak isteyen bir kullanıcı kaç defa hatalı giriş yapar ise bir <strong>Görsel Güvenlik Doğrulaması (CAPTCHA)</strong> aşamasından geçmesini istiyorsanız bu sayıyı aşağıdan belirtin.<br />Örneğin, kullanıcı 3 defa hatalı giriş denemesinden bulundu ve kullanıcının 4. giriş denemesinde bir görsel güvenlik doğrulaması aşamasından geçmesini isteyebilirsiniz. Bu ayarın varsayılan değerde (3) kalması tavsiye edilir. Eğer, bu özelliği devre dışı bırakmak istiyorsanız 0 değerini girebilirsiniz ancak bunu tavsiye etmiyoruz.]]></description>
+			<disporder>20</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[3]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="failedlogincount">
+			<title>İzin Verilen Başarısız Giriş Limiti</title>
+			<description><![CDATA[Bir kullanıcı için izin verilen başarısız giriş limitini buradan belirleyebilirsiniz. Bu sayıyı aşan kullanıcıların 24 saat boyunca oturum açmalarına izin verilmeyecektir. Bu ayarı devre dışı bırakmak istiyorsanız 0 değerini girebilirsiniz.]]></description>
+			<disporder>21</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="failedlogintime">
+			<title>Başarısız Girişten Sonra Beklenecek Süre</title>
+			<description><![CDATA[Bir kullanıcı forumunuzda başarısız bir giriş gerçekleştirdi. Tekrar giriş yapmak için beklemesi gereken dakika cinsinden süreyi belirtin. Bu ayar yukarıda ki ayar ile bağlantılıdır. Yukarıda ki ayar 0 değerinde değilse bu özellik aktif olacaktır ancak yukarıda ki ayarı kapattıysanız bu ayarın hiçbir önemi yoktur.]]></description>
+			<disporder>22</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[15]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="failedlogintext">
+			<title>Kalan Başarısız Oturum Açma Sayısı Gösterilsin Mi?</title>
+			<description><![CDATA[Kullanıcıya kaç tane daha oturum açma denemesi olduğunu söyleyen bir bilgi metni göstermek istiyor musunuz?]]></description>
+			<disporder>23</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="regtime">
+			<title>Minimum Kayıt Olma Süresi</title>
+			<description><![CDATA[Bir kullanıcının kayıt formunu doldurması için geçmesi gereken saniye cinsinden minimum süre. Otomatik bot kayıtlarını önlemek için kullanılır. İşlevi devre dışı bırakmak için bunu 0 olarak ayarlayın.]]></description>
+			<disporder>24</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[15]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="securityquestion">
+			<title>Güvenlik Sorusu Gösterilsin Mi?</title>
+			<description><![CDATA[Kullanıcıların kayıt olurken yanıtlaması gereken bir güvenlik sorusu göstermek istiyor musunuz? Bu ayarın aktif olabilmesi için <a href="./index.php?module=config-questions">Güvenlik Soruları</a> kısmında güvenlik sorusu bulunması gerekmektedir.]]></description>
+			<disporder>25</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="profile" title="Profil Seçenekleri" description="Buradaki seçenekler, forumlardaki kullanıcı profillerinin çeşitli ayarlarını kontrol eder." disporder="11" isdefault="1">
+		<setting name="sigmycode">
+			<title>İmzalarda MyCode'a İzin Ver</title>
+			<description><![CDATA[MyCode'un kullanıcıların imzalarında kullanılmasına izin vermek istiyor musunuz?]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="sigcountmycode">
+			<title>MyCode İmza Uzunluğuna Dahil Edilsin Mi?</title>
+			<description><![CDATA[Kullanıcılar imzalarında MyCode kullandıklarında MyCode'un imza karakter limitinin bir parçası olarak sayılmasını istiyor musunuz?]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="sigsmilies">
+			<title>İmzalarda İfadelere İzin Ver</title>
+			<description><![CDATA[İfadelerin kullanıcıların imzalarında kullanılmasına izin vermek istiyor musunuz?]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="sightml">
+			<title>İmzalarda HTML'ye İzin Ver</title>
+			<description><![CDATA[Kullanıcıların imzalarında HTML kullanmasına izin vermek istiyor musunuz? Bu ayarın <strong>"Hayır"</strong> olarak seçili kalması tavsiye edilir.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="sigimgcode">
+			<title>İmzalarda [img] Koduna İzin Ver</title>
+			<description><![CDATA[Kullanıcıların imzalarında [img] kodunun kullanılmasına izin vermek istiyor musunuz?]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxsigimages">
+			<title>İmza Başına Maksimum Görsel Sayısı</title>
+			<description><![CDATA[Bir kullanıcının imzasına koyabileceği maksimum resim sayısını (ifadeler dahil) girin. İmzalardaki resimleri tamamen devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[2]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="siglength">
+			<title>İmza Uzunluk Limiti</title>
+			<description><![CDATA[Bir kullanıcının imzasına yerleştirebileceği maksimum karakter sayısı. Sınırlamayı devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[255]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hidesignatures">
+			<title>Gruplara İmzaları Gizle</title>
+			<description><![CDATA[İmzaları gizlemek istediğiniz kullanıcı gruplarını seçin.]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[groupselect]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hidewebsite">
+			<title>Web Sitelerini Gruplara Gizle</title>
+			<description><![CDATA[Kullanıcı Web sitelerini gizlemek istediğiniz kullanıcı gruplarını seçin.]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[groupselect]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="useravatar">
+			<title>Varsayılan Kullanıcı Avatarı</title>
+			<description><![CDATA[Kullanıcı özel bir avatar ayarlamazsa, bunun yerine bu resim kullanılacaktır. Farklı temalar için farklı bir varsayılan avatar resmi kullanmak istiyorsanız, lütfen her temanın resim dizinini temsil etmek için <strong>{theme}</strong> kodunu kullanın.]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[images/default_avatar.png]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="useravatardims">
+			<title>Varsayılan Avatar Boyutları</title>
+			<description><![CDATA[Varsayılan avatarın boyutları; 'x' veya '|' ile ayrılmış genişlik ve yükseklik (örn. 40|40 veya 40x40) değerleridir.]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[100|100]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="useravatarrating">
+			<title>Gravatar Derecesi</title>
+			<description><![CDATA[Bir kullanıcı Gravatar kullanmayı seçerse, Gravatarlar için maksimum derecelendirmeyi ayarlamanızı sağlar. Bir kullanıcı avatarı bu derecelendirmeden yüksekse, varsayılan bir avatar kullanılacaktır. Derecelendirmeler şunlardır:
+
+<ul>
+<li><strong>G</strong>: herhangi bir kitle türüne sahip tüm web sitelerinde görüntülenmek için uygundur.</li>
+<li><strong>PG</strong>: kaba jestler, kışkırtıcı giyimli kişiler, daha az küfür veya hafif şiddet içerebilir.</li>
+<li><strong>R</strong>: ağır küfür, yoğun şiddet, çıplaklık veya ağır uyuşturucu kullanımı gibi şeyler içerebilir.</li>
+<li><strong>X</strong>: sert cinsel görüntüler veya son derece rahatsız edici şiddet içerebilir.</li>
+</ul><p>Yukarıda ki listeden siteniz için en uygun olan dereceyi seçin. Eğer, X ve R gibi dereceleri seçerseniz kullanıcılarınız Gravatar'larında cinsel içerikli, küfürlü ve şiddet içeren görselleri kullanabilir.</p>]]></description>
+			<disporder>12</disporder>
+			<optionscode><![CDATA[select
+g=G
+pg=PG
+r=R
+x=X]]></optionscode>
+			<settingvalue><![CDATA[g]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxavatardims">
+			<title>Maksimum Avatar Boyutları</title>
+			<description><![CDATA[Bir avatarın olabileceği maksimum boyutlar, 'x' veya '|' ile ayrılmış genişlik ve yükseklik değerleridir. Bu boş bırakılırsa boyut kısıtlaması olmayacaktır.]]></description>
+			<disporder>13</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[100x100]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="avatarsize">
+			<title>Maksimum Yüklenebilecek Avatar Dosya Boyutu</title>
+			<description><![CDATA[Yüklenen avatarların maksimum dosya boyutu (kilobayt cinsinden). Sınırlamayı devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>14</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[25]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="avatarresizing">
+			<title>Avatar Yeniden Boyutlandırma Modu</title>
+			<description><![CDATA[Tüm büyük avatarları otomatik olarak yeniden boyutlandırmak, kullanıcılara avatarlarını yeniden boyutlandırma seçeneği sunmak veya avatarları hiç yeniden boyutlandırmamak istiyorsanız bu ayarı değiştirebilirsiniz.]]></description>
+			<disporder>15</disporder>
+			<optionscode><![CDATA[select
+auto=Büyük avatarları otomatik olarak yeniden boyutlandır.
+user=Kullanıcılara büyük avatarları yeniden boyutlandırma seçeneği sunun.
+disabled=Bu özelliği devre dışı bırak.]]></optionscode>
+			<settingvalue><![CDATA[auto]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="avataruploadpath">
+			<title>Avatarların Yükleneceği Dizin</title>
+			<description><![CDATA[Bu, özel avatarların yükleneceği dizindir.Yüklemelerin çalışması için bu dizinin CHMOD izinleri <b>777</b> olmalıdır.Farklı bir dizin belirtmek istiyorsanız, o dizininde CHMOD değerinin 777 (yazılabilir) olduğundan emin olun.]]></description>
+			<disporder>16</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[./uploads/avatars]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowremoteavatars">
+			<title>Uzak Avatarlara İzin Ver</title>
+			<description><![CDATA[Uzak sunuculardan avatar kullanımına izin verilip verilmeyeceği bu kısımdan ayarlayabilirsiniz. Bunu etkinleştirmek sunucunuzun IP adresini açığa çıkarabilir.]]></description>
+			<disporder>17</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="customtitlemaxlength">
+			<title>Özel Kullanıcı Başlığı Maksimum Uzunluk</title>
+			<description><![CDATA[Bir kullanıcının özel kullanıcı başlığı için girebileceği maksimum karakter uzunluğu. 250 karakterden fazla olamaz.]]></description>
+			<disporder>18</disporder>
+			<optionscode><![CDATA[numeric
+min=1
+max=250]]></optionscode>
+			<settingvalue><![CDATA[40]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowaway">
+			<title>Uzaktayım Özelliğini Aktif Et?</title>
+			<description><![CDATA[Kullanıcıların durumlarını özel bir neden ve dönüş tarihi ile 'Uzakta' olarak ayarlamalarına izin verilmeli mi?]]></description>
+			<disporder>19</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowbuddyonly">
+			<title>Yalnızca Arkadaşlarla Mesajlaşmaya İzin Ver?</title>
+			<description><![CDATA[Kullanıcıların yalnızca arkadaş listelerindeki kişilere özel mesaj göndermelerine izin verin?]]></description>
+			<disporder>20</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="posting" title="Konu/Gönderi Seçenekleri" description="Bu seçenekler, forumlara konu ve yanıt gönderme ile ilgili çeşitli seçenekleri kontrol eder." disporder="12" isdefault="1">
+		<setting name="minmessagelength">
+			<title>Minimum Mesaj Uzunluğu</title>
+			<description><![CDATA[Konu ve yanıtlarda kullanıcıların yazabileceği min karakter sayısını buradan belirtebilirsiniz. Bu karakter limitinin altında konu/yanıt gönderimi yapılamayacaktır.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[5]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxmessagelength">
+			<title>Maksimum Mesaj Uzunluğu</title>
+			<description><![CDATA[Bir mesajda izin verilecek maksimum karakter (bayt) sayısı. Veritabanınıza göre izin verilen maksimum uzunluğa izin vermek için 0 olarak ayarlayın.
+<br />İpucu: MySQL kullanıcıları (maks: 65535), gelişmiş sınırlar elde etmek için mesaj alanı türünü manuel olarak TEXT'ten MEDIUMTEXT (16777215) veya LONGTEXT (4294967295) olarak değiştirebilir.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[65535]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="mycodemessagelength">
+			<title>MyCode'lar Minimum Mesaj Uzunluğuna Dahil Edilsin Mi?</title>
+			<description><![CDATA[Kullanıcılar mesajlarda MyCode kullandığında MyCode'un minimum limitin bir parçası olarak sayılmasını istiyor musunuz?]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postfloodcheck">
+			<title>Flood Mesaj Kontrolü Etkinleştirilsin Mi?</title>
+			<description><![CDATA[Gönderiler için flood kontrolünü etkinleştirmek istiyorsanız "Açık" olarak ayarlayın. Gönderiler arasındaki beklenecek süreyide aşağıda belirtin.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postfloodsecs">
+			<title>Flood Mesaj Zaman Aralığı</title>
+			<description><![CDATA[Kullanıcıların bir mesaj gönderdikten sonra ikinci bir mesajı gönderebilmesi için beklemesi gereken saniye cinsinden süreyi belirtin. Bu ayar özellikle arka arkaya gönderi yapan kullanıcıları durdurmak için kullanışlıdır. Bu ayarın aktif olabilmesi için yukarıda ki Flood Mesaj Kontrolü seçeneğinin açık olması gerekiyor.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[60]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postmergemins">
+			<title>Mesaj Birleştirmesi</title>
+			<description><![CDATA[Bu özellik etkinleştirildiğinde, aynı yazar tarafından birbiri ardına x dakika içinde gönderilen gönderiler birleştirilerek tek bir mesaj haline getirilecektir. Gönderileri birleştirmek için zaman sınırını (dakika cinsinden) ayarlayın. Bu özelliği devre dışı bırakmak için 0 olarak ayarlayın. Varsayılan: 60 (1 Dakika)]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[60]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postmergefignore">
+			<title>Mesaj Birleştirmesinden Hariç Tutulacak Forumlar</title>
+			<description><![CDATA[Otomatik birleştirme özelliğinden hariç tutulacak forumlar. Devre dışı bırakmak için boş bırakın.]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[forumselect]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postmergeuignore">
+			<title>Mesaj Birleştirmesinden Hariç Tutulacak Kullanıcı Grupları</title>
+			<description><![CDATA[Birleştirme özelliğinden hariç tutulması gereken kullanıcı gruplarını seçin.]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[groupselect]]></optionscode>
+			<settingvalue><![CDATA[4]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postmergesep">
+			<title>Mesaj Birleştirme Ayıracı</title>
+			<description><![CDATA[İki mesajı birleştirirken kullanılacak ayırıcı Varsayılan: '[hr]']]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[[hr]]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="logip">
+			<title>Gönderi Yapanın IP Adresini Göster?</title>
+			<description><![CDATA[Gönderi yapan kullanıcıların ip adreslerini göstermek istiyor musunuz ve ip adreslerini kime göstermek istiyorsunuz?]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[radio
+no=IP'leri Gösterme
+hide=Sadece Admin & Modlara Göster
+show=Tüm Kullanıcılara Göster]]></optionscode>
+			<settingvalue><![CDATA[hide]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showeditedby">
+			<title>Mesajı 'Düzenleyen' Bilgisini Göster</title>
+			<description><![CDATA[Forumlarda yapılan bir gönderiyi, gönderinin sahibi veya bir forum yöneticisi tarafından düzenlendiğinde o mesajın düzenlendiğine dair bir bilgilendirme yazısı gösterilsin mi?]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showeditedbyadmin">
+			<title>Yöneticiler ve Moderatörler için 'Düzenleyen' Mesajını Göster</title>
+			<description><![CDATA[Yöneticiler ve moderatörler tarafından oluşturulan gönderiler için düzenlenen mesajları göstermek istiyor musunuz?]]></description>
+			<disporder>12</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxpostimages">
+			<title>Gönderi Başına Maksimum Görsel Sayısı</title>
+			<description><![CDATA[Bir kullanıcının gönderisine koyabileceği maksimum resim sayısını (ifadeler dahil) girin. Bunu devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>13</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxpostvideos">
+			<title>Gönderi Başına Maksimum Video Sayısı</title>
+			<description><![CDATA[Bir kullanıcının gönderisine koyabileceği maksimum video sayısını girin. Bunu devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>14</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="subscribeexcerpt">
+			<title>Abonelik Önizlemeleri için Karakter Sayısı</title>
+			<description><![CDATA[Konulara/Gönderilere gelen yeni bir yanıt bildirimi için gönderilecek olan e-postada kaç karakterlik bir özet istersiniz?]]></description>
+			<disporder>15</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[100]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxquotedepth">
+			<title>Maksimum İç İçe Alıntı Sayısı</title>
+			<description><![CDATA[Alıntı etiketleri için maksimum derinlik seviyesi. Bir gönderiye alıntı-yanıt verirken, bu eşiği aşan tüm iç içe alıntılar otomatik olarak kaldırılır. Bu değerin yalnızca alıntı-yanıtlama sırasında uygulandığını unutmayın - bu sınırı aşmak için manuel olarak alıntı girmek hala mümkündür ve bu ayar zaten gönderilen gönderileri etkilemeyecektir. Sınırı devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>16</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[5]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="polloptionlimit">
+			<title>Maksimum Anket Seçeneği Uzunluğu</title>
+			<description><![CDATA[Her bir anket seçeneğinin olabileceği maksimum uzunluk. Devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>17</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[250]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxpolloptions">
+			<title>Maksimum Anket Seçeneği Sayısı</title>
+			<description><![CDATA[Kullanıcıların gönderebileceği anketler için maksimum seçenek sayısı. Sınırlamayı devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>18</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="polltimelimit">
+			<title>Anket Zaman Sınırı</title>
+			<description><![CDATA[Normal kullanıcıların (yetkileri varsa) kendi başlıklarına anket ekleyebilmeleri için belirlenen süre sınırı (saat olarak). Sınırsız olması için 0 girin.]]></description>
+			<disporder>19</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[12]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="threadreview">
+			<title>Yeni Yanıtlarda En Son Gönderileri Göster?</title>
+			<description><![CDATA[Yeni bir yanıt oluştururken son gönderileri göstermek istiyor musunuz?]]></description>
+			<disporder>20</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="alloweditreason">
+			<title>Düzenleme Nedenine İzin Ver</title>
+			<description><![CDATA[Kullanıcıların gönderilerini neden düzenlediklerine dair isteğe bağlı bir neden eklemelerine izin vermek istiyor musunuz?]]></description>
+			<disporder>21</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="soft_delete">
+			<title>Kullanıcılar İçin "Geçici Sil" Etkinleştirilsin Mi?</title>
+			<description><![CDATA[Etkinleştirilirse, kullanıcılar tarafından silinen gönderiler ve konular gizlenir ve moderatörler tarafından geri yüklenebilir. Aksi takdirde, bu gönderiler ve başlıklar kalıcı olarak silinecektir.]]></description>
+			<disporder>22</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="announcementshtml">
+			<title>Duyurularda HTML'ye İzin Ver</title>
+			<description><![CDATA[Moderatörlerin duyurularda HTML kodları eklemesine izin verilsin mi? Güvenlik gereği bu ayarın <b>'Hayır'</b> olarak seçilmesini tavsiye ederiz.]]></description>
+			<disporder>23</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showownunapproved">
+			<title>Kendi Onaylanmamış Konularına / Gönderilerine Erişim İzni</title>
+			<description><![CDATA[Genel kullanıcıların kendi onaylanmamış konularına ve gönderilerine erişmesine izin verin.]]></description>
+			<disporder>24</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="attachments" title="Ek Dosya Seçenekleri" description="Ek dosya sistemiyle ilgili çeşitli seçenekler buradan yönetilebilir ve ayarlanabilir." disporder="13" isdefault="1">
+		<setting name="enableattachments">
+			<title>Ek Dosya Sistemi Etkinleştirilsin Mi?</title>
+			<description><![CDATA[Forumunuzda ki ek dosya sistemini devre dışı bırakmak istiyorsanız, bu seçeneği Hayır olarak ayarlayın.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxattachments">
+			<title>Gönderi Başına Maksimum Ek Dosya Sayısı</title>
+			<description><![CDATA[Bir kullanıcının gönderi başına yüklemesine izin verilen maksimum ek dosya sayısı. Devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[5]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="attachthumbnails">
+			<title>Gönderilerde Ekli Küçük Resimler Nasıl Gösterilsin?</title>
+			<description><![CDATA[Ek dosya olarak yüklenen resimlerin gönderilerde nasıl gösterilmesini istiyorsunuz?]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[radio
+yes=Küçük Resim (Thumbnail)
+no=Tam Boyutlu Resim (Full)
+download=İndirme Bağlantısı Olarak]]></optionscode>
+			<settingvalue><![CDATA[yes]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="attachthumbh">
+			<title>Küçük Resim Maksimum Yükseklik</title>
+			<description><![CDATA[Ek olarak eklenen görsellerin küçük resim olarak gösterilmesini istediğiniz maksimum resim yüksekliği.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[96]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="attachthumbw">
+			<title>Küçük Resim Maksimum Genişlik</title>
+			<description><![CDATA[Ek olarak eklenen görsellerin küçük resim olarak gösterilmesini istediğiniz maksimum resim genişliği.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[96]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="memberlist" title="Üye Listesi Seçenekleri" description="Bu bölüm, sayfa başına kaç üyenin gösterileceği ve hangi özelliklerin etkinleştirileceği veya devre dışı bırakılacağı gibi forum üye listesinin (memberlist.php) çeşitli yönlerini kontrol etmenizi sağlar." disporder="14" isdefault="1">
+		<setting name="enablememberlist">
+			<title>Üye Listesi Etkinleştirilsin Mi?</title>
+			<description><![CDATA[Forumunuzdaki üye listesini devre dışı bırakmak istiyorsanız, bu seçeneği Hayır olarak ayarlayın.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="membersperpage">
+			<title>Sayfa Başına Üye Sayısı</title>
+			<description><![CDATA[Üye listesinde sayfa başına gösterilecek üye sayısı.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[20]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="default_memberlist_sortby">
+			<title>Varsayılan Sıralama Yöntemi</title>
+			<description><![CDATA[Üyelerin varsayılan olarak sıralanmasını istediğiniz yöntemi seçin.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[select
+regdate=Kayıt Tarihine Göre
+postnum=Gönderi Sayısına Göre
+username=Kullanıcı Adına Göre
+lastvisit=Son Ziyaretine Göre]]></optionscode>
+			<settingvalue><![CDATA[regdate]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="default_memberlist_order">
+			<title>Varsayılan Sıralama Düzeni</title>
+			<description><![CDATA[Üyelerin varsayılan olarak sıralanmasını istediğiniz sırayı seçin.<br />Artan: A-Z / başlangıç-son olarak sıralar.<br />Azalan: Z-A / son-başlangıç olarak sıralar.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[select
+ascending=Artan
+descending=Azalan]]></optionscode>
+			<settingvalue><![CDATA[ascending]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="memberlistmaxavatarsize">
+			<title>Maksimum Üye Avatar Boyutu</title>
+			<description><![CDATA[Üye listesinde görüntülenirken avatarlar için maksimum boyutlar, 'x' veya '|' ile ayrılmış genişlik ve yükseklik değerleridir. Bir avatar çok büyükse, sistem otomatik olarak o avatarı burada ki değerlere göre küçültülecektir.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[70x70]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="reputation" title="Rep Puan Sistem Seçenekleri" description="Rep Puanı Sistemi, kullanıcılarınızın başka kullanıcıları değerlendirmesine ve kullanıcı hakkında bir yorum bırakmasına olanak tanır. Bu bölüm, rep puanı sayfasının (reputation.php) diğer yönlerini devre dışı bırakmak ve değiştirmek için çeşitli ayarlara sahiptir." disporder="15" isdefault="1">
+		<setting name="enablereputation">
+			<title>Rep Puanı Sistemi Etkinleştirilsin Mi?</title>
+			<description><![CDATA[Forumunuzdaki rep puanı sistemini devre dışı bırakmak istiyorsanız, bu seçeneği Hayır olarak ayarlayın.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="posrep">
+			<title>Olumlu Rep Puanlarına İzin Ver?</title>
+			<description><![CDATA[Kullanıcıların başkalarına olumlu rep puanı vermesine izin veriyor musunuz?]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="negrep">
+			<title>Olumsuz Rep Puanlarına İzin Ver?</title>
+			<description><![CDATA[Kullanıcıların başkalarına olumsuz rep puanı vermesine izin veriyor musunuz?]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="neurep">
+			<title>Tarafsız Rep Puanlarına İzin Ver?</title>
+			<description><![CDATA[Kullanıcıların başkalarına tarafsız rep puanı vermesine izin veriyor musunuz?]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="multirep">
+			<title>Çoklu Rep Puanı Vermeye İzin Ver?</title>
+			<description><![CDATA[Kullanıcılar aynı kullanıcıya birden fazla rep puanı verebilir mi? <br />Not: "Gönderi" için verilen rep puanı limitini etkilemez. Sadece kullanıcın profiline girilerek verilen rep puanı limitini ayarlar.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postrep">
+			<title>Gönderi Rep Puanlarına İzin Ver?</title>
+			<description><![CDATA[Rep Puanları verildiği gönderi ile bağlanmasını istiyor musunuz?]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="repsperpage">
+			<title>Sayfa Başına Rep Puanı Yorumları</title>
+			<description><![CDATA[Burada, rep puanı sisteminde sayfa başına gösterilecek rep puanı yorumlarının sayısını girebilirsiniz.]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[15]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxreplength">
+			<title>Maksimum Rep Puanı Yorum Uzunluğu</title>
+			<description><![CDATA[Bir rep puanı yorumu için kullanılabilecek maksimum karakter sayısı.]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[300]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="minreplength">
+			<title>Minimum Rep Puanı Yorum Uzunluğu</title>
+			<description><![CDATA[Bir rep puanı yorumu için kullanılabilecek minimum karakter sayısı.]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="warning" title="Uyarı Sistemi Ayarları" description="Uyarı sistemi, forum personelinin kullanıcıları kural ihlalleri için uyarmasına olanak tanır. Burada uyarı sistemini kontrol eden ayarları yönetebilirsiniz (warnings.php)." disporder="16" isdefault="1">
+		<setting name="enablewarningsystem">
+			<title>Uyarı Sistemi Etkinleştirilsin Mi?</title>
+			<description><![CDATA[Uyarı sistemini tamamen devre dışı bırakmak için Hayır olarak ayarlayın.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowcustomwarnings">
+			<title>Özel Uyarı Türlerine İzin Verilsin Mi?</title>
+			<description><![CDATA[Kullanıcıları uyarma izni olanlar tarafından özel bir uyarı nedeni ve uyarı seviyesi belirtebilmesine izin verin.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="canviewownwarning">
+			<title>Kullanıcılar Kendi Uyarılarını Görüntüleyebilir Mi?</title>
+			<description><![CDATA[Kullanıcıların Kullanıcı KP'lerinde son uyarıları görüntülemelerine ve uyarı seviyelerini profillerinde göstermelerine izin vermek için Evet olarak ayarlayın.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowanonwarningpms">
+			<title>Anonim Uyarı ÖM'larına İzin Ver?</title>
+			<description><![CDATA[Moderatörlerin anonim olarak uyardığı kullanıcıya özel mesaj göndermesine izin verilsin mi?]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxwarningpoints">
+			<title>Maksimum Uyarı Puanı Seviyesi</title>
+			<description><![CDATA[Bir kullanıcıya %100 uyarı seviyesi olarak kabul edilmeden önce verilebilecek maksimum uyarı puanı.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="privatemessaging" title="Özel Mesajlaşma Seçenekleri" description="MyBB Özel Mesajlaşma sistemi (private.php) ile ilgili çeşitli seçenekler buradan yönetilebilir ve ayarlanabilir." disporder="17" isdefault="1">
+		<setting name="enablepms">
+			<title>Özel Mesajlaşma sistemi Etkinleştirilsin Mi?</title>
+			<description><![CDATA[Forumunuzdaki özel mesajlaşma sistemini devre dışı bırakmak istiyorsanız, bu seçeneği Hayır olarak ayarlayın.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="pmquickreply">
+			<title>Hızlı Yanıt Kutusunu Göster</title>
+			<description><![CDATA[Hızlı yanıt kutusunun özel mesajların altında gösterilip gösterilmeyeceğini ayarlamanızı sağlar.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="pmsallowhtml">
+			<title>HTML'ye İzin Ver</title>
+			<description><![CDATA[Evet'in seçilmesi HTML'nin özel mesajlarda kullanılmasına izin verecektir. <strong>Bu ayarın güvenlik gereği <u>Hayır</u> olarak seçilmesi tavsiye edilir.</strong>]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="pmsallowmycode">
+			<title>MyCode'a İzin Ver</title>
+			<description><![CDATA[Evet'in seçilmesi MyCode'un özel mesajlarda kullanılmasına izin verecektir.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="pmsallowsmilies">
+			<title>İfadelere İzin Ver</title>
+			<description><![CDATA[Evet'in seçilmesi özel mesajlarda İfadelerin kullanılmasına izin verecektir.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="pmsallowimgcode">
+			<title>[img] Koduna İzin Ver</title>
+			<description><![CDATA[Evet'in seçilmesi [img] kodunun özel mesajlarda kullanılmasına izin verecektir.]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="pmsallowvideocode">
+			<title>[video] Koduna İzin Ver</title>
+			<description><![CDATA[Evet'in seçilmesi [video] Kodunun özel mesajlarda kullanılmasına izin verecektir.]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="pmfloodsecs">
+			<title>Özel Mesaj Flood Zaman Kısıtlaması</title>
+			<description><![CDATA[Kullanıcıların mesaj gönderme arasında beklemesi gereken süreyi (saniye cinsinden) geçerli olacak şekilde ayarlayın. Devre dışı bırakmak için 0 olarak ayarlayın.<br/> Kullanıcılar bir kullanıcıya özel mesaj gönderdikten sonra aynı kullanıcıya tekrar özel mesaj göndermek istediklerinde flood özel mesajları engellemek için bu kısıtlama kullanılmaktadır.]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[60]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showpmip">
+			<title>Özel Mesaj Göndericisinin IP Adresini Göster</title>
+			<description><![CDATA[Özel mesaj gönderen kullanıcıların IP adreslerini göstermek istiyor musunuz ve IP adreslerini kimlere göstermek istiyorsunuz?]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[radio
+no=IP Adresini Gösterme
+hide=Sadece Admin ve Modlara Göster
+show=Herkese Göster]]></optionscode>
+			<settingvalue><![CDATA[hide]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxpmquotedepth">
+			<title>Maksimum ÖM İç İçe Alıntı Sınırı</title>
+			<description><![CDATA[Alıntı etiketleri için maksimum iç içe girme sınırı. Bir ÖM'ye alıntıyla yanıt verirken, bu eşiği aşan tüm iç içe alıntılar otomatik olarak kaldırılır. Bu değerin yalnızca alıntı-yanıtlama sırasında uygulandığını unutmayın - bu sınırı aşmak için manuel olarak alıntı girmek hala mümkündür ve bu ayar zaten gönderilen ÖM'ları etkilemeyecektir. Sınırı devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[5]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="calendar" title="Takvim Seçenekleri" description="Forum takvimi, etkinliklerin ve üyelerin doğum günlerinin herkese açık ve özel olarak listelenmesine olanak tanır. Bu bölüm Takvim (calendar.php) için ayarları kontrol etmenizi ve yönetmenizi sağlar." disporder="18" isdefault="1">
+		<setting name="enablecalendar">
+			<title>Takvim Etkinleştirilsin Mi?</title>
+			<description><![CDATA[Forumunuzdaki takvimi devre dışı bırakmak istiyorsanız, bu seçeneği Hayır olarak ayarlayın.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="whosonline" title="Kimler Çevrimiçi Seçenekleri" description="Kim Çevrimiçi işleviyle ilgili çeşitli ayarlar (online.php)." disporder="19" isdefault="1">
+		<setting name="wolcutoffmins">
+			<title>Çevrimiçi Süresi (dakika)</title>
+			<description><![CDATA[Bir kullanıcının çevrimdışı olarak işaretlenmesinden önce geçmesi gereken süre. <strong>Önerilen: 15dk.</strong>]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[15]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="refreshwol">
+			<title>Kimler Çevrimiçi Sayfası Yenilenme Zamanı (dakika)</title>
+			<description><![CDATA["Kim çevrimiçi" sayfasının yenilenmesinden önceki dakika sayısı. 0 değerini girmek bu özelliği devre dışı bırakır.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="wolorder">
+			<title>Kimler Çevrimiçi Sıralama Düzeni</title>
+			<description><![CDATA[Çevrimiçi kullanıcıları kullanıcı adına veya son etkinliğe göre sıralayın. Not: Bu ayar yalnızca portal ve index sayfalarında etkili olur.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[select
+username=Kullanıcı Adına Göre Sırala [Artan]
+activity=Son Etkinliğine Göre Sırala [Azalan]]]></optionscode>
+			<settingvalue><![CDATA[username]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="wolusersperpage">
+			<title>Sayfa Başına Kullanıcı Sayısı</title>
+			<description><![CDATA[Sayfa başına görüntülenecek kullanıcı sayısı. Varsayılanı kullanmak için 0 olarak ayarlayın.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[20]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="woldisplayspiders">
+			<title>Kimler Çevrimiçi Sayfasında Örümcek/Botlar Göster?</title>
+			<description><![CDATA[Kimler Çevrimiçi listesinde örümcekleri/botları görüntüleyin. Not: Bu ayar yalnızca portal ve index sayfalarında etkili olur.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="userpruning" title="Kullanıcı Temizleme Sistemi Seçenekleri" description="Kullanıcı Temizleme Sistemi, belirli kriterleri karşılayan kullanıcıları forumunuzdan kaldırmanıza olanak tanır. Burada bu kriterleri yapılandırabilirsiniz." disporder="20" isdefault="1">
+		<setting name="enablepruning">
+			<title>Kullanıcı Temizleme Sistemi Etkinleştirilsin Mi?</title>
+			<description><![CDATA[Kullanıcıları aşağıda belirtilen kriterlere göre temizlek için AÇIK olarak ayarlayın.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="enableprunebyposts">
+			<title>Gönderi Sayısına Göre Kullanıcıları Temizle</title>
+			<description><![CDATA[Kullanıcıları gönderi sayılarına göre temizlemek için bu ayarı AÇIK olarak ayarlayın.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="prunepostcount">
+			<title>Temizlenmesi İçin Gereken Gönderi Sayısı</title>
+			<description><![CDATA[Belirteceğiniz gönderi sayısından (konu/yorum) daha azına sahip olan kullanıcılar forumdan silinecek/kaldırılacaktır.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="prunepostcountall">
+			<title>Tüm Gönderileri Say?</title>
+			<description><![CDATA[Evet olarak ayarlanırsa, kullanıcıların gönderi sayısını artırmayan forumlardaki gönderiler de temizleme sırasında dikkate alınacaktır.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="dayspruneregistered">
+			<title>Kayıt Tarihinden İtibaren X Gündür Gönderi Yapılmadığı Gün Sayısı</title>
+			<description><![CDATA[Forumunuza kayıt olan kullanıcılar, kayıt oldukları tarihten itibaren kaç x gün boyunca gönderi yapmazlar ise forum hesaplarının silinmesini istiyorsunuz?]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[90]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="pruneunactived">
+			<title>Aktif Olmayan Kullanıcıları Temizle</title>
+			<description><![CDATA[Belirleyeceğiniz bir gün sonunda forumunuzda aktif olmayan kullanıcıları temizlemek istiyorsanız bu ayarı AÇIK olarak ayarlayın.]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="dayspruneunactivated">
+			<title>Temizlemek İçin Gereken Aktif Olunmayan Süre:</title>
+			<description><![CDATA[En az verilen gün sayısı kadar etkin olmayan kullanıcıları temizlemek için ayarlayın.<br/> Sitenize kayıt olduğu tarihten itibaren x gündür aktiflik göstermeyen kullanıcı hesaplarını temizlemek istiyorsanız bu seçeneği tercih edebilirsiniz.]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[90]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="prunethreads">
+			<title>Kullanıcıların Konu/Gönderilerini Temizle</title>
+			<description><![CDATA[Yukarıda ki seçeneklerden biri ile forum hesabı temizlenecek/silinecek olan kullanıcıların forumunuza göndermiş olduğu konu ve gönderileride silmek istiyorsanız bu ayarı EVET olarak ayarlayın. <br />'HAYIR' olarak ayarlandığında sadece kullanıcının ilgili forum hesabı silinecektir ve o güne kadar gönderdiği tüm konu/gönderiler anonim hesap adı altında forumunuzda kalmaya devam edecektir.]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="portal" title="Portal Ayarları" description="Portal sayfası, forumunuz hakkında son gönderileri, kimlerin çevrimiçi olduğunu, forum istatistiklerini, duyurular ve daha fazlası dahil olmak üzere birçok farklı bilgiyi derler. Bu bölüm, portal sayfasının (portal.php) özelliklerini kontrol etmek için çeşitli ayarlara sahiptir." disporder="21" isdefault="1">
+		<setting name="portal">
+			<title>Portalı Etkinleştir</title>
+			<description><![CDATA[Forumunuzdaki portalı devre dışı bırakmak istiyorsanız, bu seçeneği Hayır olarak ayarlayın.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_announcementsfid">
+			<title>Portal'da Gönderileri Göstermek İstediğiniz Forumlar</title>
+			<description><![CDATA[Lütfen portal sayfasında hangi forumlarda paylaşılan konu/gönderileri göstermek istediğinizi seçin. Birden fazla forum seçmek için CTRL tuşuna basılı tutarak seçim yapabilirsiniz.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[forumselect]]></optionscode>
+			<settingvalue><![CDATA[-1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_numannouncements">
+			<title>Sayfa Başına Gösterilecek Gönderi Sayısı</title>
+			<description><![CDATA[Lütfen portal sayfasında, sayfa başına gösterilecek gönderi sayısını girin.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_showwelcome">
+			<title>Hoş Geldin Kutusu Gösterilsin Mi?</title>
+			<description><![CDATA[Ziyaretçilere / kullanıcılara hoş geldiniz kutusunu göstermek istiyor musunuz?]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_showpms">
+			<title>Kullanıcıların ÖM Sayısı Gösterilsin Mi?</title>
+			<description><![CDATA[Mevcut kullanıcının özel mesaj sisteminde sahip olduğu özel mesaj sayısını göstermek istiyor musunuz?]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_showstats">
+			<title>Forum İstatistikleri Gösterilsin Mi?</title>
+			<description><![CDATA[Portal sayfasında toplam gönderi, konu, üye ve son kayıt olan üyeyi göstermek istiyor musunuz?]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_showwol">
+			<title>Kimler Çevrimiçi Bilgisi Gösterilsin Mi?</title>
+			<description><![CDATA[Kullanıcılara portal sayfasını ziyaret ettiklerinde 'Kimler Çevrimiçi' bilgisini göstermek istiyor musunuz?]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_showsearch">
+			<title>Arama Kutusu Gösterilsin Mi?</title>
+			<description><![CDATA[Kullanıcıların portaldaki forumlarda hızlı bir şekilde arama yapmasına olanak tanıyan arama kutusunu göstermek istiyor musunuz?]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_showdiscussions">
+			<title>Son Gönderiler Kutusu Gösterilsin Mi?</title>
+			<description><![CDATA[Portal sayfasında konulara gelen son yanıtlar, en son gönderileri göstermek istiyor musunuz?]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_showdiscussionsnum">
+			<title>Gösterilmesini İstediğiniz Son Gönderi Sayısı</title>
+			<description><![CDATA['Son Gönderiler Kutusu' kısmında göstermek istediğiniz gönderi sayısını belirtin. Sayının artması portal sayfasının yükleyeceği miktara bağlı olarak hız performansını etkileyecektir.]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_excludediscussion">
+			<title>Son Gönderiler'den Hariç Tutulacak Forumlar</title>
+			<description><![CDATA[Son Gönderiler Kutusu'ndan hariç tutmak istediğiniz forumları seçin. Birden fazla forum seçmek için CTRL tuşuna basılı tutarak seçim yapabilirsiniz.]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[forumselect]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="search" title="Arama Sistemi Seçenekleri" description="Bu gruptaki çeşitli ayarlar, MyBB'deki konular, gönderiler ve yardım belgeleri için yerleşik arama mekanizmasında değişiklikler yapmanıza olanak tanır." disporder="22" isdefault="1">
+		<setting name="searchtype">
+			<title>Arama Türü</title>
+			<description><![CDATA[Lütfen kullanmak istediğiniz arama sistemi türünü seçin. "Standart" veya "Tam Metin" arasında seçim yapabilirsiniz (veritabanınıza bağlı olarak). Tam metin arama, standart MyBB aramasından daha güçlüdür ve daha hızlıdır.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[php
+<select name=\"upsetting[{$setting['name']}]\"><option value=\"standard\">".(isset($lang->setting_searchtype_standard)?$lang->setting_searchtype_standard:"Standart")."</option>".($db->supports_fulltext("threads") && $db->supports_fulltext_boolean("posts")?"<option value=\"fulltext\"".($setting['value']=="fulltext"?" selected=\"selected\"":"").">".(isset($lang->setting_searchtype_fulltext)?$lang->setting_searchtype_fulltext:"Tam Metin")."</option>":"")."</select>]]></optionscode>
+			<settingvalue><![CDATA[fulltext]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="searchfloodtime">
+			<title>Aramak İçin Flood Zaman Sınırı</title>
+			<description><![CDATA[Arama için izin verilen minimum aralık için saniye cinsinden süreyi girin. Bu, kullanıcıların sürekli arama yaparak sunucunuza aşırı yüklenmesini önler. Devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[30]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="minsearchword">
+			<title>Minimum Arama Kelimesi Uzunluğu</title>
+			<description><![CDATA[Bir arama sorgusundaki tek bir kelimenin olabileceği minimum karakter sayısını girin. Devre dışı bırakmak için 0 olarak ayarlayın (ve standart arama için 3 ve MySQL tam metin araması için 4 olan sabit sınır varsayılanını kabul edin). MySQL tam metin aramasını kullanırsanız ve bunu MySQL ayarından daha düşük bir değere ayarlarsanız MySQL bunu geçersiz kılacaktır.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="searchhardlimit">
+			<title>Maksimum Arama Sonuçları İçin Sabit Sınır</title>
+			<description><![CDATA[İşlenecek maksimum sonuç miktarını girin. Devre dışı bırakmak için 0 olarak ayarlayın. Daha büyük forumlar (1 milyondan fazla gönderi var ise forumda) bu ayar 1000'den fazla olmamalıdır.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="helpsearch">
+			<title>Yardım Belgeleri Aramasını Etkinleştir</title>
+			<description><![CDATA[Etkinleştirilirse, kullanıcıların yardım belgelerinde arama yapmasına olanak tanır.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="clickablecode" title="Tıklanabilir İfadeler ve BBCode Seçenekleri" description="Bu bölüm, tıklanabilir ifade ekleyicinin nasıl görüneceğini değiştirmenize ve varsayılan MyCode'u kontrol etmenize olanak tanır." disporder="23" isdefault="1">
+		<setting name="bbcodeinserter">
+			<title>Tıklanabilir MyCode Editörü</title>
+			<description><![CDATA[Gönderi sayfalarında tıklanabilir kod düğmeleri düzenleyicisini göstermek için bu seçeneği Açık olarak ayarlayın. Bunu kapatmak aynı zamanda İfade Ekleyiciyi de devre dışı bırakacaktır. <strong>Bu ayarın <u>AÇIK</u> olarak ayarlanması tavsiye edilir.</strong>]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="partialmode">
+			<title>Kısmi Modda Tıklanabilir MyCode Editörü</title>
+			<description><![CDATA[Bu seçenek Evet olarak ayarlanırsa editör kısmi modda olacaktır. [quote] ve [img] gibi çeşitli MyCode'lar düz metin etiketleri olarak eklenecektir.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="smilieinserter">
+			<title>Tıklanabilir İfadeler Ekleyicisi</title>
+			<description><![CDATA[Bu seçenek 'açık' olarak ayarlanırsa, tıklanabilir ifadeler gönderi ekleme sayfalarında görünecektir.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="smilieinsertertot">
+			<title>Gösterilecek İfade Sayısı</title>
+			<description><![CDATA[Tıklanabilir ifade ekleyicide gösterilecek toplam ifade sayısını girin.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[20]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="smilieinsertercols">
+			<title>Gösterilecek İfade Sütun Sayısı</title>
+			<description><![CDATA[Tıklanabilir ifade ekleyicide göstermek istediğiniz sütun sayısını girin.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[numeric
+min=1]]></optionscode>
+			<settingvalue><![CDATA[4]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowbasicmycode">
+			<title>Temel MyCode'a İzin Ver</title>
+			<description><![CDATA[Bunun Evet olarak ayarlanması, kullanıcıların Kalın, İtalik, Altı Çizili, Üstü Çizili ve Ayırıcı (HR) gibi temel MyCode'ları kullanmasına olanak tanır.]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowcolormycode">
+			<title>Metin Rengi Seçici MyCode'una İzin Ver</title>
+			<description><![CDATA[Bunu Evet olarak ayarlamak kullanıcıların metinlere renk vermesi için Renk Seçici MyCode'u kullanmasına izin verir.]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowsizemycode">
+			<title>Metin Boyutu Seçici MyCode'una İzin Ver</title>
+			<description><![CDATA[Bunu Evet olarak ayarlamak kullanıcıların metinlere boyut vermek için Boyut Seçici MyCode'u kullanmasına izin verir.]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowfontmycode">
+			<title>MyCode Yazı Tipine İzin Ver</title>
+			<description><![CDATA[Bunu Evet olarak ayarlamak kullanıcıların MyCode Yazı Tipini kullanmasına izin verir.]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowlinkmycode">
+			<title>MyCode Link Eklemeye İzin Ver</title>
+			<description><![CDATA[Bunu Evet olarak ayarlamak, kullanıcıların MyCode URL'sini kullanmasına olanak tanır. Örnek: [url=https://mybb.pro]MyBB.Pro[url].]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowautourl">
+			<title>URL'leri Bağlantılara Otomatik Olarak Ayrıştırma</title>
+			<description><![CDATA[Bunu Evet olarak ayarlamak URL'leri bağlantı olarak ayrıştıracaktır. Konu ve yanıt gönderimi sırasında direkt olarak kopyala-yapıştır şeklinde eklenen bağlantılar otomatik olarak url yapısına dönüştürülecektir.]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowemailmycode">
+			<title>E-Posta MyCode'una İzin Ver</title>
+			<description><![CDATA[Bunu Evet olarak ayarlamak, kullanıcıların E-Posta MyCode'unu kullanmasına izin verir. Örneğin:[email]no-reply@mybb.pro[/email], [email=no-reply@mybb.pro]E-Posta Gönder![/email]]]></description>
+			<disporder>12</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowalignmycode">
+			<title>Hizalama MyCode'una İzin Ver</title>
+			<description><![CDATA[Bunun Evet olarak ayarlanması, kullanıcıların Hizlama MyCode'unu kullanmasına olanak tanır. Örneğin: [align=left], [align=center] gibi BBCode'lar.]]></description>
+			<disporder>13</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowlistmycode">
+			<title>Liste MyCode'una İzin Ver</title>
+			<description><![CDATA[Bunun Evet olarak ayarlanması, kullanıcıların MyCode Listesini kullanmasına olanak tanır.]]></description>
+			<disporder>14</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowcodemycode">
+			<title>Kod MyCode'una İzin Ver</title>
+			<description><![CDATA[Bunu Evet olarak ayarlamak, kullanıcıların Kod ve PHP MyCode'unu kullanmasına izin verir.<br />Örneğin: [code]<div class="csskod">html, css vs diğer kodlar için.</div>[/code], [php]$l="php kodları için";[/php]]]></description>
+			<disporder>15</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowsymbolmycode">
+			<title>Sembol MyCode'una İzin Ver</title>
+			<description><![CDATA[Bunun Evet olarak ayarlanması kullanıcıların (tm), (c) ve (r) MyCode'ları kullanmasına olanak tanır.]]></description>
+			<disporder>16</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowmemycode">
+			<title>Me/Slap MyCode'una İzin Ver</title>
+			<description><![CDATA[Bunu Evet olarak ayarlamak kullanıcıların <strong>/me</strong> ve <strong>/slap</strong> MyCode'larını kullanmasına izin verir. Detaylı bilgi için <a href="https://mybb.pro/forum-mybb-yardim-belgeleri" target="_blank" rel="noopener">tıklayın</a>.]]></description>
+			<disporder>17</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="guestimages">
+			<title>[img] MyCode Önizlemesini Ziyaretçilere Göster</title>
+			<description><![CDATA[Bunu Evet olarak ayarlamak, konulara ve yanıtlara eklenen resimleri doğrudan ziyaretçilere gösterecektir. Hayır seçilir ise, resim tam görünümü yerine resmin bağlantısı gösterilecektir.]]></description>
+			<disporder>18</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="guestvideos">
+			<title>[video] MyCode Önizlemesini Ziyaretçilere Göster</title>
+			<description><![CDATA[Bunu Evet olarak ayarlamak, konulara ve yanıtlara eklenen videoları doğrudan ziyaretçilere gösterecektir. Hayır seçilir ise, videonun tam görünümü yerine video bağlantısı gösterilecektir.]]></description>
+			<disporder>19</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="cpprefs" title="Admin Kontrol Paneli Tercihleri (Genel)" description="Bu bölüm Admin Kontrol Paneli için genel tercihleri ayarlamanızı sağlar. Burada yapılan tercihler tüm yöneticiler için geçerli olur." disporder="24" isdefault="1">
+		<setting name="cplanguage">
+			<title>Admin Kontrol Paneli Dili</title>
+			<description><![CDATA[Admin Kontrol Paneli için bir dil tercihi yapın. Bu ayar tüm yöneticiler için varsayılan tercih olarak kabul edilecektir.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[adminlanguage]]></optionscode>
+			<settingvalue><![CDATA[turkish]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="cpstyle">
+			<title>Admin Kontrol Paneli Tasarımı</title>
+			<description><![CDATA[Admin Kontrol Paneli için kullanmak istediğiniz temayı buradan seçebilirsiniz. Burada ki temalara /admin/ klasörü içerisinde yer alan /styles/ klasöründe bulunan dosyalardan alır. Klasör adı tema adı olarak kabul edilir ve içerisinde ki still dosyaları (css) ayrı ayrı işlenir.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[cpstyle]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxloginattempts">
+			<title>Maksimum Giriş Yapma Denemesi Sayısı</title>
+			<description><![CDATA[Admin Paneline erişimi yasaklanmadan önce bir kullanıcı kaç x denemeden sonra admin paneline girişinin yasaklanacağını aşağıdan belirtin.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[5]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="loginattemptstimeout">
+			<title>Giriş Yapma Denemeleri Zaman Aşımı</title>
+			<description><![CDATA[Giriş yapmaya çalışan kişi maksimum deneme sayısına ulaşırsa, tekrar giriş yapabilmek için ne kadar süre beklemesi gerekir (dakika cinsinden)? Devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[15]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="contactsettings" title="İletişim Ayarları" description="İletişim sayfasının (contact.php) ile ilgili yapılandırmalar yapabilmek için çeşitli ayarları burada bulabilirsiniz." disporder="25" isdefault="1">
+		<setting name="contact">
+			<title>İletişim Sayfası Etkinleştirilsin Mi?</title>
+			<description><![CDATA[Bunu Evet olarak ayarlamak iletişim sayfasına erişilmesine izin verecektir.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="contact_guests">
+			<title>İletişim Sayfasını Ziyaretçilere Devre Dışı Bırak</title>
+			<description><![CDATA[Bunu Evet olarak ayarlamak, ziyaretçilerin iletişim sayfasına erişimine izin vermeyecektir.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="contact_badwords">
+			<title>İletişim Sayfasında Kelime Filtresini Etkinleştir</title>
+			<description><![CDATA[Bunu Evet olarak ayarlamak, konu ve mesaj alanlarını göndermeden önce kelime filtresinden geçirecektir.Bu kelime filtrelerini, <a href="./index.php?module=config-badwords" rel="noopener" target="_blank">Kelime Filtreleri</a> sayfasından yönetebilirsiniz.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="contact_maxsubjectlength">
+			<title>İletişim Sayfasında Maksimum Konu Uzunluğu</title>
+			<description><![CDATA[Konuda izin verilecek maksimum karakter sayısı. 0 ayarı sınırsız karakter uzunluğuna izin verir.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[85]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="contact_minmessagelength">
+			<title>İletişim Sayfasındaki Minimum Mesaj Uzunluğu</title>
+			<description><![CDATA[Mesajı göndermek için gereken minimum karakter sayısı. 0 değeri bu ayarı devre dışı bırakır.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[5]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="contact_maxmessagelength">
+			<title>İletişim Sayfasındaki Maksimum Mesaj Uzunluğu</title>
+			<description><![CDATA[İletide izin verilecek maksimum karakter sayısı. 0 ayarı sınırsız karakter uzunluğuna izin verir.]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[65535]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="purgespammer" title="Spamcı Temizleme Seçenekleri" description="Bu bölüm Spamcıları Temizle özelliğinin ayarlarını değiştirmenize olanak tanır." disporder="26" isdefault="1">
+		<setting name="purgespammergroups">
+			<title>İzin Verilen Kullanıcı Grupları</title>
+			<description><![CDATA[Spamcıyı Temizle aracını kullanmasına izin verilen kullanıcı gruplarını seçin.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[groupselect]]></optionscode>
+			<settingvalue><![CDATA[3,4,6]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="purgespammerpostlimit">
+			<title>Gönderi Sınırı</title>
+			<description><![CDATA[Bu ayar, aktif üyeler üzerinde kullanılmasını önlemek için bu aracın belirli bir miktardan fazla gönderisi olan kullanıcılar üzerinde kullanılmasını durdurur. Değerin 0 olarak ayarlanması gönderi kontrolünü devre dışı bırakacaktır, ancak bunu önermiyoruz.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="purgespammerbandelete">
+			<title>Spamcıyı Yasaklayın veya Silin</title>
+			<description><![CDATA[Bu araçla spam gönderi yapanların hesaplarını yasaklamak veya silmek istiyor musunuz?]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[radio
+ban=Kalıcı Olarak Yasakla
+delete=Kullanıcıyı Sil]]></optionscode>
+			<settingvalue><![CDATA[ban]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="purgespammerbangroup">
+			<title>Spamcının Atanacağı Yasaklı Kullanıcı Grubu</title>
+			<description><![CDATA[Bir kullanıcı spamcı olarak temizlendiğinde atanacağı yasaklı kullanıcı grubunu seçin. Varsayılan olarak forumunuzda bulunan Yasaklı (Cezalı) Üye grubu seçilidir. Başka bir kullanıcı grubuna eklenmesini istiyorsanız aşağıdan o grubu seçin.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[groupselectsingle]]></optionscode>
+			<settingvalue><![CDATA[7]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="purgespammerbanreason">
+			<title>Yasaklanma Nedeni</title>
+			<description><![CDATA[Spamcıyı yasaklamak için kullanılan sebep.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[Spam gönderi yaptığınız için forumdan uzaklaştırıldınız. Bunun bir yanlış anlaşılma olduğunu düşünüyorsanız, lütfen forum yöneticileri ile iletişime geçin.]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="purgespammerapikey">
+			<title>Stop Forum Spam API Anahtarı</title>
+			<description><![CDATA[Stop Forum Spam veritabanına bir spam gönderen hakkında bilgi gönderebilmek/alabilmek için bir API anahtarına ihtiyacınız vardır. API anahtarını almak için <a href="https://www.stopforumspam.com/forum/register.php" target="_blank" rel="noopener">buraya</a> tıklayın. Anahtarınızı aldığınızda, aşağıdaki kutuya size özel oluşturulan bu API anahtarını yapıştırın.]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="purgespammerbanip">
+			<title>Yasaklı IP Filtresi Ekleyin</title>
+			<description><![CDATA[Spam yapan kullanıcının IP Adresinide yasaklı IP listesine eklemek istiyor musunuz? Başka kullanıcılarda aynı IP adresine sahipler ise onlarda forumu kullanamayacaklardır.]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+	</settinggroup>
+	<settinggroup name="stopforumspam" title="Stop Forum Spam Ayarları" description="Bu bölüm StopForumSpam.com ile entegrasyon için kullanılan ayarları değiştirmenizi sağlar." disporder="27" isdefault="1">
+		<setting name="enablestopforumspam_on_register">
+			<title>StopForumSpam ile Karşılıklı Kayıtları Kontrol Edin?</title>
+			<description>
+				<![CDATA[Tüm yeni üye kayıtlarını StopForumSpam.com veritabanı ile karşılıklı kontrol etmek istiyor musunuz?]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_on_contact">
+			<title>İletişim Sayfasını Kullanan Ziyaretçileri StopForumSpam ile Karşılıklı Kayıtları Kontrol Edin?</title>
+			<description>
+				<![CDATA[İletişim sayfası kullanılırken ziyaretçinin e-posta ve IP adresleri StopForumSpam ile karşılıklı kontrol edilmeli mi?]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_on_newreply">
+			<title>Ziyaretçi Yanıtlarını StopForumSpam ile Karşılıklı Kontrol Edilsin Mi?</title>
+			<description>
+				<![CDATA[Ziyaretçilerin yeni yanıt oluştururken kullandıkları kullanıcı adları ve IP adresleri StopForumSpam ile karşılıklı kontrol edilsin mi?]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_on_newthread">
+			<title>Ziyaretçi Konularını StopForumSpam ile Karşılıklı Kontrol Edilsin Mi?</title>
+			<description>
+				<![CDATA[Ziyaretçilerin yeni konu oluştururken kullandıkları kullanıcı adları ve IP adresleri StopForumSpam ile karşılıklı kontrol edilsin mi?]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_min_weighting_before_spam">
+			<title>Minimum Stop Forum Spam Seviyesi</title>
+			<description>
+				<![CDATA[Bir kullanıcının spam gönderici olduğuna karar vermeden önce StopForumSpam'den alınan minimum spam seviyesi. 0 ile 100 arasında bir sayı olmalıdır. Varsayılan değerde kalması tavsiye edilir.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[50.00]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_check_usernames">
+			<title>Kullanıcı Adları Kontrol Edilsin Mi?</title>
+			<description>
+				<![CDATA[Kullanıcı adları, StopForumSpam veritabanında rapor edilen spam kullanıcı adları ile karşılaştırılsın mı? Eşleştirme olur ise kullanıcı adı, spam kullanıcı adı olarak yasaklanacaktır.]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_check_emails">
+			<title>E-Posta Adresleri Kontrol Edilsin Mi?</title>
+			<description>
+				<![CDATA[E-Posta adresleri, StopForumSpam veritabanında rapor edilen spam e-posta adresleri ile karşılaştırılsın mı? Eşleştirme olur ise e-posta adresi, spam e-posta adresi olarak yasaklanacaktır.]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_check_ips">
+			<title>IP Adresleri Kontrol Edilsin Mi?</title>
+			<description>
+				<![CDATA[IP Adresleri, StopForumSpam veritabanında rapor edilen spam IP adresleri ile karşılaştırılsın mı? IP Adresleri ile bir eşleşme olur ise ilgili IP Adresleri, spam IP adresi olarak işaretlenip, yasaklanacaktır.]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_block_on_error">
+			<title>StopForumSpam Hata ile Karşılaşırsa Engelle</title>
+			<description>
+				<![CDATA[StopForumSpam API'sinden bilgi alınırken bir hata oluşursa, kullanıcı yine de engellenmeli mi?]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_log_blocks">
+			<title>StopForumSpam Yasaklamalarını Kayıt Edilsin Mi?</title>
+			<description>
+				<![CDATA[Her StopForumSpam yasaklamaları kaydedilmeli mi? Bu ayarı, spam engellemelerini kontrol etmek amacı ile ara sıra açıp, belli bir süre kayıtların tutulması ve kontrol edilmesinden sonra tekrar ayarın kapatılması tavsiye edilir. <br />Çok fazla spam engellemesi olan forumlarda bu ayarın aktif olması çok ciddi şekilde veritabanının ve sunucu depolama alanının dolmasına sebebiyet verecektir.]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="contactdetails" title="Ek İletişim Seçenekleri" description="Bu kısımdan ekstra olarak kullanıcılar tarafından doldurulabilir olan ek iletişim bilgilerini yapılandırmanızı sağlayacak olan seçenekleri içerir." disporder="28" isdefault="1">
+		<setting name="allowicqfield">
+			<title>ICQ Numarası Eklemesine İzin Verilen Kullanıcı Grupları</title>
+			<description><![CDATA[ICQ Numarası ek iletişim bilgileri alanını kullanmasına izin verilen kullanıcı gruplarını aşağıdan seçin. Birden fazla grup seçmek için CTRL tuşuna basılı tutarak seçimlerinizi yapabilirsiniz.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[groupselect]]></optionscode>
+			<settingvalue><![CDATA[-1]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="allowskypefield">
+			<title>Skype ID Eklemesine İzin Verilen Kullanıcı Grupları</title>
+			<description><![CDATA[Skype ID ek iletişim bilgileri alanını kullanmasına izin verilen kullanıcı gruplarını aşağıdan seçin. Birden fazla grup seçmek için CTRL tuşuna basılı tutarak seçimlerinizi yapabilirsiniz.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[groupselect]]></optionscode>
+			<settingvalue><![CDATA[-1]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="allowgooglefield">
+			<title>Google Hangouts ID Eklemesine İzin Verilen Kullanıcı Grupları</title>
+			<description><![CDATA[Google Hangouts ID ek iletişim bilgileri alanını kullanmasına izin verilen kullanıcı gruplarını aşağıdan seçin. Birden fazla grup seçmek için CTRL tuşuna basılı tutarak seçimlerinizi yapabilirsiniz.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[groupselect]]></optionscode>
+			<settingvalue><![CDATA[-1]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+	</settinggroup>
+	<settinggroup name="statspage" title="İstatistik Sayfası Seçenekleri" description="Bu bölüm istatistik sayfasının ayarlarını değiştirmenizi sağlar." disporder="29" isdefault="1">
+		<setting name="statsenabled">
+			<title>İstatistik Sayfası Etkinleştirilsin Mi?</title>
+			<description><![CDATA[Forumunuzdaki istatistik sayfasını devre dışı bırakmak istiyorsanız, bu seçeneği Hayır olarak ayarlayın.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="statscachetime">
+			<title>İstatistikler Önbellek Süresi</title>
+			<description><![CDATA[İstatistik sayfası önbelleğini yenilemek için gereken önbellek süresini girin (saat cinsinden). Önbelleğe almayı devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="statslimit">
+			<title>İstatistik Sınırı</title>
+			<description><![CDATA[İstatistikler sayfasında en çok yanıtlanan ve en çok görüntülenen gönderiler için gösterilecek gönderi/konu sayısı. Devre dışı bırakmak için 0 olarak ayarlayın.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[numeric
+min=0]]></optionscode>
+			<settingvalue><![CDATA[15]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="statstopreferrer">
+			<title>İstatistik Sayfasında En Çok Referansı Olanı Göster</title>
+			<description><![CDATA[En çok referansa sahip kullanıcıyı stats.php sayfasında göstermek istiyor musunuz? Bu veritabanınıza ek bir sorgu ekler.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="forumteam" title="Forum Yönetim Ekibi Seçenekleri" description="Bu bölüm, forum yönetimi ekip listesinin (showteam.php), ekip üyeleri listelenirken dikkate alınacak hususlar ve hangi özelliklerin etkinleştirileceği veya devre dışı bırakılacağı gibi çeşitli yönlerini kontrol etmenizi sağlar." disporder="30" isdefault="1">
+		<setting name="enableshowteam">
+			<title>Forum Yöneticileri Listesi Etkinleştirilsin Mi?</title>
+			<description><![CDATA[Forumunuzdaki forum yöneticileri listesini devre dışı bırakmak istiyorsanız, bu seçeneği Hayır olarak ayarlayın.]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showaddlgroups">
+			<title>Ek Grupları Göster</title>
+			<description><![CDATA[Ekip listesinin ek gruplar da dikkate alınarak doldurulup doldurulmayacağını belirtin.]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showgroupleaders">
+			<title>Grup Liderlerini Göster</title>
+			<description><![CDATA[Ekip listesinde görünmesi için grup liderlerini dahil edin.]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+</settings>
