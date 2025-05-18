@@ -26,4 +26,4 @@ MyBB'nin kullanımı hakkında bilgi almak, soru ve sorunların nasıl tespit ed
 ## MyBB Eklentileri ve Temaları
 MyBB, eklenti ve temalar ile çok daha esnek ve özel olabilen bir forum yazılımdır. İhtiyaçlarınıza yönelik eklenti ve temalara göz atmak için: [MyBB Temaları](https://mybb.pro/forum-mybb-temalari) ve [MyBB Eklentileri](https://mybb.pro/forum-mybb-eklentileri) sayfalarını ziyaret edebilirsiniz.
 
-## [MyBB Güvenlik](mybb/SECURITY.md)
+## [MyBB Güvenlik](SECURITY.md)
