@@ -5,11 +5,8 @@
  * Copyright © 2024 MyBB Pro, Tüm Hakları Saklıdır.
  * 
  * Website: https://mybb.pro
- * Lisans: https://mybb.pro/hakkimizda/lisans/
- * 
- * Support: https://mybb.pro/
- *
- * Last Update: 27.11.2024 (v1.8.38)
+ * Çeviri: Simurg
+ * Last Update: 02.06.2025
  */
 
 $l['nav_width'] = "180";
@@ -139,7 +136,6 @@ $l['remove_avatar'] = "Kullanıcının Avatarı Kaldırılsın Mı?";
 $l['profile_optional'] = "İsteğe Bağlı Alanlar";
 $l['website_url'] = "Website URL:";
 $l['birthdate'] = "Doğum Tarihi:";
-$l['icq_number'] = "ICQ Numarası:";
 $l['skype_id'] = "Skype ID:";
 $l['google_id'] = "Google Hangouts ID:";
 $l['away_notice_away'] = "{1} tarihinden beri uzaktasınız.";

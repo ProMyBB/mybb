@@ -5,11 +5,8 @@
  * Copyright © 2024 MyBB Pro, Tüm Hakları Saklıdır.
  * 
  * Website: https://mybb.pro
- * Lisans: https://mybb.pro/hakkimizda/lisans/
- * 
- * Support: https://mybb.pro/
- *
- * Last Update: 27.11.2024 (v1.8.38)
+ * Çeviri: Simurg
+ * Last Update: 02.06.2025
  */
 
 $l['nav_usercp'] = "Kullanıcı Kontrol Paneli";
@@ -215,11 +212,9 @@ $l['change_email_notice'] = "E-posta adresinizi değiştirmek için lütfen <a h
 $l['profile_optional'] = "İsteğe Bağlı Alanlar";
 $l['website_url'] = "Web Sitenizin URL'si:";
 $l['birthdate'] = "Doğum Tarihi:";
-$l['contact_field_icq'] = "ICQ Numarası:";
 $l['contact_field_skype'] = "Skype ID:";
 $l['contact_field_google'] = "Google Hangouts ID:";
 $l['contact_field_error'] = "Üzgünüz, ancak belirtilen ID çok uzun olduğu için iletişim bilgilerinizi değiştiremiyoruz. Google Hangouts ID ve Skype ID en fazla 75 karakter uzunluğunda olabilir.";
-$l['contact_field_icqerror'] = "Üzgünüz, ancak belirtilen numara çok uzun olduğu için ICQ numaranızı değiştiremiyoruz. ICQ numaraları en fazla 10 karakter uzunluğunda olabilir.";
 $l['additional_information'] = "Ek Bilgi";
 $l['update_profile'] = "Profili Güncelle";
 $l['away_information'] = "Uzaklaşma Bilgileri";

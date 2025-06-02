@@ -9,7 +9,7 @@
  * 
  * Support: https://mybb.pro/
  *
- * Update: 31.10.2024 (v1.8.38)
+ * Update: 02.06.2025 (v1.8.39)
  */
 
 // Dil paketinin adı
@@ -34,7 +34,7 @@ $langinfo['support_link'] = "https://mybb.pro/forum-ceviri-hatasi-ve-sorun-bildi
 //$langinfo['additional_name'] = " ";
 
 // Uyumlu olduğu MyBB Sürümü
-$langinfo['version'] = "1838";
+$langinfo['version'] = "1839";
 
 // Admin CP çeviriye dahil ise 1 değilse 0 (1 Dahil)
 $langinfo['admin'] = 1;

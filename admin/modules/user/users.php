@@ -519,7 +519,6 @@ if($mybb->input['action'] == "edit")
 			"profile_fields" => $mybb->get_input('profile_fields', MyBB::INPUT_ARRAY),
 			"profile_fields_editable" => true,
 			"website" => $mybb->get_input('website'),
-			"icq" => $mybb->get_input('icq'),
 			"skype" => $mybb->get_input('skype'),
 			"google" => $mybb->get_input('google'),
 			"birthday" => array(
@@ -590,7 +589,7 @@ if($mybb->input['action'] == "edit")
 
 		// Set the data of the user in the datahandler.
 		$userhandler->set_data($updated_user);
-		$errors = '';
+		$errors = array();
 
 		// Validate the user and get any errors that might have occurred.
 		if(!$userhandler->validate_user())
@@ -1175,7 +1174,6 @@ EOF;
 	$form_container = new FormContainer($lang->optional_profile_info.': '.htmlspecialchars_uni($user['username']));
 	$form_container->output_row($lang->custom_user_title, $lang->custom_user_title_desc, $form->generate_text_box('usertitle', $mybb->get_input('usertitle'), array('id' => 'usertitle')), 'usertitle');
 	$form_container->output_row($lang->website, "", $form->generate_text_box('website', $mybb->get_input('website'), array('id' => 'website')), 'website');
-	$form_container->output_row($lang->icq_number, "", $form->generate_numeric_field('icq', $mybb->get_input('icq'), array('id' => 'icq', 'min' => 0)), 'icq');
 	$form_container->output_row($lang->skype_handle, "", $form->generate_text_box('skype', $mybb->get_input('skype'), array('id' => 'skype')), 'skype');
 	$form_container->output_row($lang->google_handle, "", $form->generate_text_box('google', $mybb->get_input('google'), array('id' => 'google')), 'google');
 
@@ -2729,7 +2727,7 @@ if($mybb->input['action'] == "inline_edit")
 			}
 			else
 			{
-				if($mybb->input['processed'] == 1)
+				if(isset($mybb->input['processed']))
 				{
 					// Set up user handler.
 					require_once MYBB_ROOT.'inc/datahandlers/user.php';
@@ -3312,7 +3310,7 @@ function build_users_view($view)
 	// Build the search SQL for users
 
 	// List of valid LIKE search fields
-	$user_like_fields = array("username", "email", "website", "icq", "skype", "google", "signature", "usertitle");
+	$user_like_fields = array("username", "email", "website", "skype", "google", "signature", "usertitle");
 	foreach($user_like_fields as $search_field)
 	{
 		if(!empty($view['conditions'][$search_field]) && empty($view['conditions'][$search_field.'_blank']))
@@ -4220,7 +4218,7 @@ function user_search_conditions($input, &$form)
 		$input['conditions'] = (array)my_unserialize($input['conditions']);
 	}
 
-	$array = array('username', 'email', 'usergroup', 'website', 'website_blank', 'icq', 'icq_blank', 'skype', 'skype_blank', 'google', 'google_blank', 'signature', 'signature_blank', 'usertitle', 'usertitle_blank', 'postnum_dir', 'postnum', 'threadnum_dir', 'threadnum', 'regdate', 'regip', 'lastip', 'postip');
+	$array = array('username', 'email', 'usergroup', 'website', 'website_blank', 'skype', 'skype_blank', 'google', 'google_blank', 'signature', 'signature_blank', 'usertitle', 'usertitle_blank', 'postnum_dir', 'postnum', 'threadnum_dir', 'threadnum', 'regdate', 'regip', 'lastip', 'postip');
 	foreach($array as $condition)
 	{
 		if(!isset($input['conditions'][$condition]))
@@ -4263,7 +4261,6 @@ function user_search_conditions($input, &$form)
 	$form_container->output_row($lang->is_member_of_groups, $lang->additional_user_groups_desc, $form->generate_select_box('conditions[usergroup][]', $options, $input['conditions']['usergroup'], array('id' => 'usergroups', 'multiple' => true, 'size' => 5)), 'usergroups');
 
 	$form_container->output_row($lang->website_contains, "", $form->generate_text_box('conditions[website]', $input['conditions']['website'], array('id' => 'website'))." {$lang->or} ".$form->generate_check_box('conditions[website_blank]', 1, $lang->is_not_blank, array('id' => 'website_blank', 'checked' => $input['conditions']['website_blank'])), 'website');
-	$form_container->output_row($lang->icq_number_contains, "", $form->generate_text_box('conditions[icq]', $input['conditions']['icq'], array('id' => 'icq'))." {$lang->or} ".$form->generate_check_box('conditions[icq_blank]', 1, $lang->is_not_blank, array('id' => 'icq_blank', 'checked' => $input['conditions']['icq_blank'])), 'icq');
 	$form_container->output_row($lang->skype_contains, "", $form->generate_text_box('conditions[skype]', $input['conditions']['skype'], array('id' => 'skype'))." {$lang->or} ".$form->generate_check_box('conditions[skype_blank]', 1, $lang->is_not_blank, array('id' => 'skype_blank', 'checked' => $input['conditions']['skype_blank'])), 'skype');
 	$form_container->output_row($lang->google_contains, "", $form->generate_text_box('conditions[google]', $input['conditions']['google'], array('id' => 'google'))." {$lang->or} ".$form->generate_check_box('conditions[google_blank]', 1, $lang->is_not_blank, array('id' => 'google_blank', 'checked' => $input['conditions']['google_blank'])), 'google');
 	$form_container->output_row($lang->signature_contains, "", $form->generate_text_box('conditions[signature]', $input['conditions']['signature'], array('id' => 'signature'))." {$lang->or} ".$form->generate_check_box('conditions[signature_blank]', 1, $lang->is_not_blank, array('id' => 'signature_blank', 'checked' => $input['conditions']['signature_blank'])), 'signature');

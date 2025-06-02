@@ -5,11 +5,8 @@
  * Copyright © 2024 MyBB Pro, Tüm Hakları Saklıdır.
  * 
  * Website: https://mybb.pro
- * Lisans: https://mybb.pro/hakkimizda/lisans/
- * 
- * Support: https://mybb.pro/
- *
- * Last Update: 27.11.2024 (v1.8.38)
+ * Çeviri: Simurg
+ * Last Update: 02.06.2025
  */
 
 $l['nav_register'] = "Kayıt Ol";
@@ -71,7 +68,6 @@ $l['users_contact_details'] = "{1} » İletişim Bilgileri";
 $l['homepage'] = "Website:";
 $l['pm'] = "Özel Mesaj:";
 $l['send_pm'] = "{1} Özel Mesaj Gönder";
-$l['icq_number'] = "ICQ Numarası:";
 $l['skype_id'] = "Skype ID:";
 $l['google_id'] = "Google Hangouts ID:";
 $l['avatar']  = "Avatar:";
@@ -92,7 +88,7 @@ $l['email'] = "E-Posta:";
 $l['send_user_email'] = "{1} » E-Posta Gönder";
 $l['users_signature'] = "{1} » Forum İmzası";
 $l['agreement'] = "Üyelik Sözleşmesi";
-$l['agreement_1'] = "Uygunsuz, cinsel yönelimli, küfürlü, nefret dolu, iftira veya tehdit içeren, bir kişinin mahremiyetini ihlal ettiği düşünülebilecek veya başka türlü herhangi bir yasayı ihlal eden mesajları düzenlemeye veya kaldırmaya çalışsak da, foruma gönderilen her mesajı incelememiz mümkün değildir.Bu nedenle, bu forumda yayınlanan tüm mesajların orijinal mesaj yazarının görüş ve düşüncelerini ifade ettiğini ve bu forumun görüşlerini yansıtmadığını kabul edersiniz.Bu nedenle, gönderilen mesajlar / konular için hiçbir sorumluluk kabul etmiyoruz ve sorumlu tutulamayız.Her mesajın doğruluğu ve eksiksizliği konusunda kefil veya garanti vermiyoruz.";
+$l['agreement_1'] = "Uygunsuz, cinsel yönelimli, çocuk istismarı, çocuklara yönelik cinsel istismar, küfürlü, nefret dolu, iftira veya tehdit içeren, bir kişinin mahremiyetini ihlal ettiği düşünülebilecek veya başka türlü herhangi bir yasayı ihlal eden mesajları düzenlemeye veya kaldırmaya çalışsak da, foruma gönderilen her mesajı incelememiz mümkün değildir.Bu nedenle, bu forumda yayınlanan tüm mesajların orijinal mesaj yazarının görüş ve düşüncelerini ifade ettiğini ve bu forumun görüşlerini yansıtmadığını kabul edersiniz.Bu nedenle, gönderilen mesajlar / konular için hiçbir sorumluluk kabul etmiyoruz ve sorumlu tutulamayız.Her mesajın doğruluğu ve eksiksizliği konusunda kefil veya garanti vermiyoruz.";
 $l['agreement_2'] = "Bu forum sitesine kaydolarak, bilerek, hatalı, küfürlü, nefret dolu, taciz edici, cinsel yönelimli, tehdit edici veya bir kişinin gizliliğini ihlal eden veya yürürlükteki yasaları ihlal edebilecek herhangi bir materyal göndermeyeceğinizi kabul edersiniz.";
 $l['agreement_3'] = "Bu kurallara uyulmaması hesabınızın feshedilmesine, hesabınızın askıya alınmasına veya bu foruma erişiminizin kalıcı olarak engellenmesine neden olabilir.IP Adresiniz, bu forumda yaptığınız her gönderiyle birlikte kaydedilir ve gerektiğinde forum moderatörleri tarafından geri alınabilir.Uygun görülmesi halinde herhangi bir hesabı veya mesajı herhangi bir zamanda kaldırma, düzenleme veya kilitleme yeteneğine ve hakkına sahip olduğumuzu kabul edersiniz.Ayrıca, bu foruma girdiğiniz tüm bilgilerin bir veritabanında saklandığını ve giriş bilgilerinizi kaydetmek için bilgisayarınızda \"çerezler\" saklandığını kabul edersiniz.";
 $l['agreement_4'] = "Bu forumda sağladığınız hiçbir bilgi, tam izniniz olmadan herhangi bir üçüncü tarafa ifşa edilmeyecektir, paylaşılmayacaktır; Ve forum yönetimi verilerinizin tehlikeye atıldığı herhangi bir bilgisayar korsanlığı girişiminden sorumlu tutulamaz.";

@@ -165,7 +165,6 @@ $l['optional_profile_info'] = "İsteğe Bağlı Profil Bilgileri";
 $l['custom_user_title'] = "Özel Kullanıcı Başlığı";
 $l['custom_user_title_desc'] = "Boşsa, kullanıcı grubunda ki kullanıcı başlığı kullanılacaktır.";
 $l['website'] = "Website";
-$l['icq_number'] = "ICQ Numarası";
 $l['skype_handle'] = "Skype ID";
 $l['google_handle'] = "Google Hangouts ID";
 $l['birthday'] = "Doğum Tarihi";

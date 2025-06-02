@@ -4,12 +4,9 @@
  * MyBB 1.8 Türkçe Dil Paketi
  * Copyright © 2024 MyBB Pro, Tüm Hakları Saklıdır.
  * 
- * Website: https://mybb.pro
- * Lisans: https://mybb.pro/hakkimizda/lisans/
- * 
- * Support: https://mybb.pro/
- *
- * Last Update: 27.11.2024 (v1.8.38)
+ * Website: https://mybb.pro 
+ * Çeviri: Simurg
+ * Last Update: 02.06.2025
  */
 
 $l['userdata_missing_username'] = 'Bir kullanıcı adı girmediniz. Lütfen, bir tane kullanıcı adı girin.';
@@ -32,7 +29,6 @@ $l['userdata_email_already_in_use'] = "Başka bir üye tarafından zaten kullan�
 
 $l['userdata_dob_required'] = "Doğum tarihinizi seçmediniz. Devam etmek için lütfen doğum tarihinizi seçin - Doğum tarihinizi ve yaşınızı profil seçeneklerinizden diğer kullanıcılardan gizleyebilirsiniz.";
 $l['userdata_invalid_website'] = 'Girdiğiniz web sitesi adresi geçersiz. Lütfen, geçerli bir web sitesi adresi girin veya alanı boş bırakın.';
-$l['userdata_invalid_icq_number'] = 'Girdiğiniz ICQ numarası geçersiz. Lütfen, geçerli bir ICQ numarası girin veya alanı boş bırakın.';
 $l['userdata_invalid_birthday'] = 'Girdiğiniz doğum günü tarihi geçersiz. Lütfen, geçerli bir doğum günü tarihi girin veya alanı boş bırakın.';
 $l['userdata_invalid_birthday_coppa'] = 'Yaşınızı doğrulamak için lütfen doğduğunuz yılı girin. Profil seçeneklerinizden Yaşınızı ve Doğum Tarihinizi gizleyebilirsiniz.';
 $l['userdata_invalid_birthday_coppa2'] = 'Bu foruma üye olmak için en az <strong>13 Yaşında</strong> olmalısınız. Lütfen, bir <strong>Site Yöneticisi</strong> ile iletişime geçin.';

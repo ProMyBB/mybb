@@ -1492,16 +1492,16 @@ show=Tüm Kullanıcılara Göster]]></optionscode>
 			<isdefault>1</isdefault>
 		</setting>
 		<setting name="showeditedby">
-			<title>Mesajı 'Düzenleyen' Bilgisini Göster</title>
-			<description><![CDATA[Forumlarda yapılan bir gönderiyi, gönderinin sahibi veya bir forum yöneticisi tarafından düzenlendiğinde o mesajın düzenlendiğine dair bir bilgilendirme yazısı gösterilsin mi?]]></description>
+			<title>Kullanıcıların Gönderilerinde 'Düzenleyen' Notunu Göster</title>
+			<description><![CDATA[Normal bir kullanıcı tarafından yazılan bir gönderi düzenlendiğinde bir 'Düzenleyen' notu görüntüleyin.]]></description>
 			<disporder>11</disporder>
 			<optionscode><![CDATA[yesno]]></optionscode>
 			<settingvalue><![CDATA[1]]></settingvalue>
 			<isdefault>1</isdefault>
 		</setting>
 		<setting name="showeditedbyadmin">
-			<title>Yöneticiler ve Moderatörler için 'Düzenleyen' Mesajını Göster</title>
-			<description><![CDATA[Yöneticiler ve moderatörler tarafından oluşturulan gönderiler için düzenlenen mesajları göstermek istiyor musunuz?]]></description>
+			<title>Yöneticiler ve Moderatörler Tarafından Yapılan Gönderilerde 'Düzenleyen' Notunu Göster</title>
+			<description><![CDATA[Bir yönetici veya moderatör tarafından yazılan bir gönderi düzenlendiğinde 'Düzenleyen' notunu görüntüleyin.]]></description>
 			<disporder>12</disporder>
 			<optionscode><![CDATA[yesno]]></optionscode>
 			<settingvalue><![CDATA[1]]></settingvalue>
@@ -2585,15 +2585,6 @@ delete=Kullanıcıyı Sil]]></optionscode>
 		</setting>
 	</settinggroup>
 	<settinggroup name="contactdetails" title="Ek İletişim Seçenekleri" description="Bu kısımdan ekstra olarak kullanıcılar tarafından doldurulabilir olan ek iletişim bilgilerini yapılandırmanızı sağlayacak olan seçenekleri içerir." disporder="28" isdefault="1">
-		<setting name="allowicqfield">
-			<title>ICQ Numarası Eklemesine İzin Verilen Kullanıcı Grupları</title>
-			<description><![CDATA[ICQ Numarası ek iletişim bilgileri alanını kullanmasına izin verilen kullanıcı gruplarını aşağıdan seçin. Birden fazla grup seçmek için CTRL tuşuna basılı tutarak seçimlerinizi yapabilirsiniz.]]></description>
-			<disporder>1</disporder>
-			<optionscode><![CDATA[groupselect]]></optionscode>
-			<settingvalue><![CDATA[-1]]></settingvalue>
-			<isdefault>1</isdefault>
-			<helpkey></helpkey>
-		</setting>
 		<setting name="allowskypefield">
 			<title>Skype ID Eklemesine İzin Verilen Kullanıcı Grupları</title>
 			<description><![CDATA[Skype ID ek iletişim bilgileri alanını kullanmasına izin verilen kullanıcı gruplarını aşağıdan seçin. Birden fazla grup seçmek için CTRL tuşuna basılı tutarak seçimlerinizi yapabilirsiniz.]]></description>

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * MyBB 1.8
  * Copyright 2014 MyBB Group, All Rights Reserved
@@ -9,14 +10,12 @@
  */
 
 // Disallow direct access to this file for security reasons
-if(!defined("IN_MYBB"))
-{
+if (!defined("IN_MYBB")) {
 	die("Direct initialization of this file is not allowed.<br /><br />Please make sure IN_MYBB is defined.");
 }
 
 // Fallback
-if(!defined('THIS_SCRIPT'))
-{
+if (!defined('THIS_SCRIPT')) {
 	define('THIS_SCRIPT', 'unknown');
 }
 
@@ -32,60 +31,50 @@ if(!defined('THIS_SCRIPT'))
 //define('MYBB_ROOT', "./");
 
 // Attempt autodetection
-if(!defined('MYBB_ROOT'))
-{
-	define('MYBB_ROOT', dirname(dirname(__FILE__))."/");
+if (!defined('MYBB_ROOT')) {
+	define('MYBB_ROOT', dirname(dirname(__FILE__)) . "/");
 }
 
 define("TIME_NOW", time());
 
-if(function_exists('date_default_timezone_set') && !ini_get('date.timezone'))
-{
-	date_default_timezone_set('GMT');
+if (function_exists('date_default_timezone_set') && !ini_get('date.timezone')) {
+	date_default_timezone_set('GMT+3');
 }
 
-require_once MYBB_ROOT."inc/class_error.php";
+require_once MYBB_ROOT . "inc/class_error.php";
 $error_handler = new errorHandler();
 
 // Show errors triggered during initialization
 $error_handler->force_display_errors = true;
 
-if(!function_exists('json_encode') || !function_exists('json_decode'))
-{
-	require_once MYBB_ROOT.'inc/3rdparty/json/json.php';
+if (!function_exists('json_encode') || !function_exists('json_decode')) {
+	require_once MYBB_ROOT . 'inc/3rdparty/json/json.php';
 }
 
-require_once MYBB_ROOT."inc/functions.php";
+require_once MYBB_ROOT . "inc/functions.php";
 
-require_once MYBB_ROOT."inc/class_timers.php";
+require_once MYBB_ROOT . "inc/class_timers.php";
 $maintimer = new timer();
 
-require_once MYBB_ROOT."inc/class_core.php";
+require_once MYBB_ROOT . "inc/class_core.php";
 $mybb = new MyBB;
 
 $not_installed = false;
-if(!file_exists(MYBB_ROOT."inc/config.php"))
-{
+if (!file_exists(MYBB_ROOT . "inc/config.php")) {
 	$not_installed = true;
-}
-else
-{
+} else {
 	// Include the required core files
-	require_once MYBB_ROOT."inc/config.php";
+	require_once MYBB_ROOT . "inc/config.php";
 	$mybb->config = &$config;
 
-	if(!isset($config['database']))
-	{
+	if (!isset($config['database'])) {
 		$not_installed = true;
 	}
 }
 
-if($not_installed !== false)
-{
-	if(file_exists(MYBB_ROOT."install/index.php"))
-	{
-		if(defined("IN_ARCHIVE") || defined("IN_ADMINCP"))
-		{
+if ($not_installed !== false) {
+	if (file_exists(MYBB_ROOT . "install/index.php")) {
+		if (defined("IN_ARCHIVE") || defined("IN_ADMINCP")) {
 			header("Location: ../install/index.php");
 			exit;
 		}
@@ -96,39 +85,34 @@ if($not_installed !== false)
 	$mybb->trigger_generic_error("board_not_installed");
 }
 
-if(!is_array($config['database']))
-{
+if (!is_array($config['database'])) {
 	$mybb->trigger_generic_error("board_not_upgraded");
 }
 
-if(empty($config['admin_dir']))
-{
+if (empty($config['admin_dir'])) {
 	$config['admin_dir'] = "admin";
 }
 
 // Load Settings
 $settings = array();
 
-if(file_exists(MYBB_ROOT."inc/settings.php"))
-{
-	require_once MYBB_ROOT."inc/settings.php";
+if (file_exists(MYBB_ROOT . "inc/settings.php")) {
+	require_once MYBB_ROOT . "inc/settings.php";
 	$mybb->settings = $settings;
 }
 
 // Trigger an error if the installation directory exists
-if(is_dir(MYBB_ROOT."install") && !file_exists(MYBB_ROOT."install/lock"))
-{
+if (is_dir(MYBB_ROOT . "install") && !file_exists(MYBB_ROOT . "install/lock")) {
 	$mybb->trigger_generic_error("install_directory");
 }
 
 // Load DB interface
-require_once MYBB_ROOT."inc/db_base.php";
+require_once MYBB_ROOT . "inc/db_base.php";
 require_once MYBB_ROOT . 'inc/AbstractPdoDbDriver.php';
 
-require_once MYBB_ROOT."inc/db_".$config['database']['type'].".php";
+require_once MYBB_ROOT . "inc/db_" . $config['database']['type'] . ".php";
 
-switch($config['database']['type'])
-{
+switch ($config['database']['type']) {
 	case "sqlite":
 		$db = new DB_SQLite;
 		break;
@@ -149,23 +133,22 @@ switch($config['database']['type'])
 }
 
 // Check if our DB engine is loaded
-if(!extension_loaded($db->engine))
-{
+if (!extension_loaded($db->engine)) {
 	// Throw our super awesome db loading error
 	$mybb->trigger_generic_error("sql_load_error");
 }
 
-require_once MYBB_ROOT."inc/class_templates.php";
+require_once MYBB_ROOT . "inc/class_templates.php";
 $templates = new templates;
 
-require_once MYBB_ROOT."inc/class_datacache.php";
+require_once MYBB_ROOT . "inc/class_datacache.php";
 $cache = new datacache;
 
-require_once MYBB_ROOT."inc/class_plugins.php";
+require_once MYBB_ROOT . "inc/class_plugins.php";
 $plugins = new pluginSystem;
 
 // Include our base data handler class
-require_once MYBB_ROOT."inc/datahandler.php";
+require_once MYBB_ROOT . "inc/datahandler.php";
 
 // Connect to Database
 define("TABLE_PREFIX", $config['database']['table_prefix']);
@@ -174,34 +157,31 @@ $db->set_table_prefix(TABLE_PREFIX);
 $db->type = $config['database']['type'];
 
 // Language initialisation
-require_once MYBB_ROOT."inc/class_language.php";
+require_once MYBB_ROOT . "inc/class_language.php";
 $lang = new MyLanguage;
-$lang->set_path(MYBB_ROOT."inc/languages");
+$lang->set_path(MYBB_ROOT . "inc/languages");
 
 // Load cache
 $cache->cache();
 
 // Load Settings
-if(empty($settings))
-{
+if (empty($settings)) {
 	rebuild_settings();
 }
 
-$settings['wolcutoff'] = $settings['wolcutoffmins']*60;
+$settings['wolcutoff'] = $settings['wolcutoffmins'] * 60;
 $settings['bbname_orig'] = $settings['bbname'];
 $settings['bbname'] = strip_tags($settings['bbname']);
 $settings['orig_bblanguage'] = $settings['bblanguage'];
 
 // Fix for people who for some specify a trailing slash on the board URL
-if(substr($settings['bburl'], -1) == "/")
-{
+if (substr($settings['bburl'], -1) == "/") {
 	$settings['bburl'] = my_substr($settings['bburl'], 0, -1);
 }
 
 // Setup our internal settings and load our encryption key
 $settings['internal'] = $cache->read("internal_settings");
-if(!$settings['internal']['encryption_key'])
-{
+if (!$settings['internal']['encryption_key']) {
 	$cache->update("internal_settings", array('encryption_key' => random_str(32)));
 	$settings['internal'] = $cache->read("internal_settings");
 }
@@ -211,33 +191,49 @@ $mybb->parse_cookies();
 $mybb->cache = &$cache;
 $mybb->asset_url = $mybb->get_asset_url();
 
-if($mybb->use_shutdown == true)
-{
+if ($mybb->use_shutdown == true) {
 	register_shutdown_function('run_shutdown');
 }
 
 // Did we just upgrade to a new version and haven't run the upgrade scripts yet?
 $version = $cache->read("version");
-if(!defined("IN_INSTALL") && !defined("IN_UPGRADE") && $version['version_code'] < $mybb->version_code)
-{
+if (!defined("IN_INSTALL") && !defined("IN_UPGRADE") && $version['version_code'] < $mybb->version_code) {
 	$version_history = $cache->read("version_history");
-	if(empty($version_history) || file_exists(MYBB_ROOT."install/resources/upgrade".(int)(end($version_history)+1).".php"))
-	{
+	if (empty($version_history)) {
 		$mybb->trigger_generic_error("board_not_upgraded");
+	} else {
+		$latest_installed = end($version_history);
+
+		// Check for standard migrations and old branch patches (1 < 1p1 < 1p2 < 2)
+		$parts = explode('p', $latest_installed);
+
+		$candidates = array(
+			(string)((int)$parts[0] + 1),
+		);
+
+		if (isset($parts[1])) {
+			$candidates[] = $parts[0] . 'p' . ((int)$parts[1] + 1);
+		} else {
+			$candidates[] = $parts[0] . 'p1';
+		}
+
+		foreach ($candidates as $candidate) {
+			if (file_exists(MYBB_ROOT . "install/resources/upgrade" . $candidate . ".php")) {
+				$mybb->trigger_generic_error("board_not_upgraded");
+			}
+		}
 	}
 }
 
 $error_handler->force_display_errors = false;
 
 // Load plugins
-if(!defined("NO_PLUGINS") && !($mybb->settings['no_plugins'] == 1))
-{
+if (!defined("NO_PLUGINS") && !($mybb->settings['no_plugins'] == 1)) {
 	$plugins->load();
 }
 
 /* URL Definitions */
-if($mybb->settings['seourls'] == "yes" || ($mybb->settings['seourls'] == "auto" && isset($_SERVER['SEO_SUPPORT']) && $_SERVER['SEO_SUPPORT'] == 1))
-{
+if ($mybb->settings['seourls'] == "yes" || ($mybb->settings['seourls'] == "auto" && isset($_SERVER['SEO_SUPPORT']) && $_SERVER['SEO_SUPPORT'] == 1)) {
 	$mybb->seo_support = true;
 
 	define('FORUM_URL', "forum-{fid}.html");
@@ -254,9 +250,7 @@ if($mybb->settings['seourls'] == "yes" || ($mybb->settings['seourls'] == "auto" 
 	define('CALENDAR_URL_DAY', 'calendar-{calendar}-year-{year}-month-{month}-day-{day}.html');
 	define('CALENDAR_URL_WEEK', 'calendar-{calendar}-week-{week}.html');
 	define('EVENT_URL', "event-{eid}.html");
-}
-else
-{
+} else {
 	define('FORUM_URL', "forumdisplay.php?fid={fid}");
 	define('FORUM_URL_PAGED', "forumdisplay.php?fid={fid}&page={page}");
 	define('THREAD_URL', "showthread.php?tid={tid}");
@@ -298,4 +292,3 @@ $time_formats = array(
 	2 => "h:i A",
 	3 => "H:i"
 );
-

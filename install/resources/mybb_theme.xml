@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="MyBB Master Style" version="1838">
+<theme name="MyBB Master Style" version="1839">
 	<properties>
 		<templateset><![CDATA[1]]></templateset>
 		<imgdir><![CDATA[images]]></imgdir>
@@ -9,7 +9,7 @@
 		<editortheme><![CDATA[mybb.css]]></editortheme>
 	</properties>
 	<stylesheets>
-		<stylesheet name="global.css" version="1827" disporder="1"><![CDATA[body {
+		<stylesheet name="global.css" version="1839" disporder="1"><![CDATA[body {
 	background: #fff;
 	color: #333;
 	text-align: center;
@@ -1669,6 +1669,7 @@ a.button.report_user_button span {
 	height: 30px;
 	text-indent: -9999px;
 	background: url(images/close.png) no-repeat 0 0;
+	z-index: 2;
 }
 
 .modal-spinner {
@@ -4943,7 +4944,7 @@ if(use_xmlhttprequest == "1")
 </fieldset>
 <br />]]></template>
 		<template name="member_profile_banned_remaining" version="1808"><![CDATA[<span class="{$banned_class}">({$timeremaining} {$lang->ban_remaining})</span>]]></template>
-		<template name="member_profile_contact_details" version="1822"><![CDATA[<br />
+		<template name="member_profile_contact_details" version="1839"><![CDATA[<br />
 <table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder tfixed">
 	<colgroup>
 	<col style="width: 30%;" />
@@ -4954,17 +4955,12 @@ if(use_xmlhttprequest == "1")
 	{$website}
 	{$sendemail}
 	{$sendpm}
-	{$contact_fields['icq']}
 	{$contact_fields['skype']}
 	{$contact_fields['google']}
 </table>]]></template>
 		<template name="member_profile_contact_fields_google" version="1800"><![CDATA[<tr>
 	<td class="{$bgcolors['google']}"><strong>{$lang->google_id}</strong></td>
 	<td class="{$bgcolors['google']}">{$memprofile['google']}</td>
-</tr>]]></template>
-		<template name="member_profile_contact_fields_icq" version="1800"><![CDATA[<tr>
-	<td class="{$bgcolors['icq']}"><strong>{$lang->icq_number}</strong></td>
-	<td class="{$bgcolors['icq']}">{$memprofile['icq']}</td>
 </tr>]]></template>
 		<template name="member_profile_contact_fields_skype" version="1823"><![CDATA[<tr>
 	<td class="{$bgcolors['skype']}"><strong>{$lang->skype_id}</strong></td>
@@ -5825,7 +5821,7 @@ if(use_xmlhttprequest == "1")
 		<template name="memberlist_referrals" version="1800"><![CDATA[<td class="tcat" width="10%" align="center"><span class="smalltext"><a href="{$sorturl}&amp;sort=referrals&amp;order=descending"><strong>{$lang->referrals}</strong></a> {$orderarrow['referrals']}</span></td>]]></template>
 		<template name="memberlist_referrals_bit" version="1600"><![CDATA[<td class="{$alt_bg}" align="center">{$user['referrals']}</td>]]></template>
 		<template name="memberlist_referrals_option" version="1816"><![CDATA[<option value="referrals"{$sort_selected['referrals']}>{$lang->sort_by_referrals}</option>]]></template>
-		<template name="memberlist_search" version="1823"><![CDATA[<html>
+		<template name="memberlist_search" version="1839"><![CDATA[<html>
 <head>
 <title>{$mybb->settings['bbname']} - {$lang->search_member_list}</title>
 {$headerinclude}
@@ -5860,7 +5856,6 @@ if(use_xmlhttprequest == "1")
 </tr>
 {$contact_fields['skype']}
 {$contact_fields['google']}
-{$contact_fields['icq']}
 <tr>
 	<td class="tcat" colspan="2"><strong>{$lang->search_options}</strong></td>
 </tr>
@@ -5876,8 +5871,8 @@ if(use_xmlhttprequest == "1")
 			{$referrals_option}
 		</select><br />
 		<span class="smalltext">
-		<input type="radio" class="radio" name="order" id="order_asc" value="asc" /> <label for="order_asc">{$lang->order_asc}</label><br />
-		<input type="radio" class="radio" name="order" id="order_desc" value="desc" checked="checked" /> <label for="order_desc">{$lang->order_desc}</label>
+		<input type="radio" class="radio" name="order" id="order_asc" value="ascending" /> <label for="order_asc">{$lang->order_asc}</label><br />
+		<input type="radio" class="radio" name="order" id="order_desc" value="descending" checked="checked" /> <label for="order_desc">{$lang->order_desc}</label>
 		</span>
 	</td>
 </tr>
@@ -6782,7 +6777,7 @@ if(use_xmlhttprequest == "1")
 </tr>]]></template>
 		<template name="modcp_banuser_lift" version="1801"><![CDATA[<div class="float_right"><a href="modcp.php?action=liftban&amp;uid={$banned['uid']}&amp;my_post_key={$mybb->post_code}">{$lang->lift_ban}</a></div>]]></template>
 		<template name="modcp_banuser_liftlist" version="1800"><![CDATA[<option value="{$time}"{$selected}>{$title}{$thattime}</option>]]></template>
-		<template name="modcp_editprofile" version="1822"><![CDATA[<html>
+		<template name="modcp_editprofile" version="1839"><![CDATA[<html>
 <head>
 <title>{$mybb->settings['bbname']} - {$lang->edit_profile}</title>
 {$headerinclude}
@@ -6903,12 +6898,6 @@ if(use_xmlhttprequest == "1")
 								<fieldset class="trow2">
 									<legend><strong>{$lang->additional_contact_details}</strong></legend>
 									<table cellspacing="0" cellpadding="{$theme['tablespace']}">
-										<tr>
-											<td><span class="smalltext">{$lang->icq_number}</span></td>
-										</tr>
-										<tr>
-											<td><input type="text" class="textbox" name="icq" size="25" value="{$user_icq}" /></td>
-										</tr>
 										<tr>
 											<td><span class="smalltext">{$lang->skype_id}</span></td>
 										</tr>
@@ -9894,7 +9883,7 @@ img { max-width: 100%; height: auto; }
 </table>
 </body>
 </html>]]></template>
-		<template name="printthread_multipage" version="1800"><![CDATA[<div class="multipage">{$lang->pages} <strong>{$lang->archive_pages}</strong> {$mppage}</div>]]></template>
+		<template name="printthread_multipage" version="1839"><![CDATA[<div class="multipage">{$lang->pages} {$mppage}</div>]]></template>
 		<template name="printthread_multipage_page" version="1800"><![CDATA[<a href="{$url}&amp;page={$page}">{$page}</a>]]></template>
 		<template name="printthread_multipage_page_current" version="1800"><![CDATA[<strong>{$page}</strong>]]></template>
 		<template name="printthread_nav" version="1808"><![CDATA[+{$depth} {$lang->forum} {$forumnav['name']} (<i>{$mybb->settings['bburl']}/{$forumnav['link']}</i>)<br />]]></template>
@@ -13313,11 +13302,10 @@ if(use_xmlhttprequest == "1")
 {$footer}
 </body>
 </html>]]></template>
-	<template name="usercp_profile_contact_fields" version="1822"><![CDATA[<br />
+	<template name="usercp_profile_contact_fields" version="1839"><![CDATA[<br />
 <fieldset class="trow2">
 <legend><strong>{$lang->additional_contact_details}</strong></legend>
 <table cellspacing="0" cellpadding="{$theme['tablespace']}">
-	{$contact_fields['icq']}
 	{$contact_fields['skype']}
 	{$contact_fields['google']}
 </table>
@@ -14290,7 +14278,7 @@ $(function() {
 	var modal_zindex = 9999;
 // -->
 </script>]]></template>
-		<template name="htmldoctype" version="120"><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">]]></template>
+		<template name="htmldoctype" version="120"><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//TR" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">]]></template>
 		<template name="loginbox" version="1609"><![CDATA[<tr>
 <td class="trow2"><strong>{$lang->username}</strong></td>
 <td class="trow2"><input type="text" class="textbox" name="username" size="30" value="{$username}" /></td>

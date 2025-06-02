@@ -1644,6 +1644,10 @@ function forum_permissions($fid=0, $uid=0, $gid=0)
 			$groupperms = $mybb->usergroup;
 		}
 	}
+	else 
+	{
+		$groupperms = usergroup_permissions($gid);
+	}	
 
 	if(!is_array($forum_cache))
 	{
@@ -3646,6 +3650,8 @@ function format_avatar($avatar, $dimensions = '', $max_dimensions = '')
 function build_mycode_inserter($bind="message", $smilies = true)
 {
 	global $db, $mybb, $theme, $templates, $lang, $plugins, $smiliecache, $cache;
+
+	$codeinsert  = '';
 
 	if($mybb->settings['bbcodeinserter'] != 0)
 	{

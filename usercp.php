@@ -228,7 +228,7 @@ if($mybb->input['action'] == "do_profile" && $mybb->request_method == "post")
 		"away" => $away,
 		"profile_fields" => $mybb->get_input('profile_fields', MyBB::INPUT_ARRAY)
 	));
-	foreach(array('icq', 'skype', 'google') as $cfield)
+	foreach(array('skype', 'google') as $cfield)
 	{
 		$csetting = 'allow'.$cfield.'field';
 		if($mybb->settings[$csetting] == '')
@@ -241,23 +241,11 @@ if($mybb->input['action'] == "do_profile" && $mybb->request_method == "post")
 			continue;
 		}
 
-		if($cfield == 'icq')
-		{
-			$user[$cfield] = $mybb->get_input($cfield, 1);
+		$user[$cfield] = $mybb->get_input($cfield);
 
-			if(my_strlen($user[$cfield]) > 10)
-			{
-				error($lang->contact_field_icqerror);
-			}
-		}
-		else
+		if(my_strlen($user[$cfield]) > 75)
 		{
-			$user[$cfield] = $mybb->get_input($cfield);
-
-			if(my_strlen($user[$cfield]) > 75)
-			{
-				error($lang->contact_field_error);
-			}
+			error($lang->contact_field_error);
 		}
 	}
 
@@ -379,16 +367,6 @@ if($mybb->input['action'] == "profile")
 		$user['website'] = htmlspecialchars_uni($user['website']);
 	}
 
-	if($user['icq'] != "0")
-	{
-		$user['icq'] = (int)$user['icq'];
-	}
-
-	if($user['icq'] == 0)
-	{
-		$user['icq'] = '';
-	}
-
 	if($errors)
 	{
 		$user['skype'] = htmlspecialchars_uni($user['skype']);
@@ -399,7 +377,7 @@ if($mybb->input['action'] == "profile")
 	$contactfields = '';
 	$cfieldsshow = false;
 
-	foreach(array('icq', 'skype', 'google') as $cfield)
+	foreach(array('skype', 'google') as $cfield)
 	{
 		$contact_fields[$cfield] = '';
 		$csetting = 'allow'.$cfield.'field';

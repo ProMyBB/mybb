@@ -9,7 +9,6 @@
  * 
  * MyBB.Pro 1.8 Turkish Language Pack
  * Website: https://mybb.pro
- * License: https://mybb.pro/hakkimizda/lisans
  * 
  */
 
@@ -20,14 +19,14 @@ class MyBB
 	 *
 	 * @var string
 	 */
-	public $version = "1.8.38";
+	public $version = "1.8.39";
 
 	/**
 	 * The version code of MyBB we're running.
 	 *
 	 * @var integer
 	 */
-	public $version_code = 1838;
+	public $version_code = 1839;
 
 	/**
 	 * The current working directory.

@@ -24,6 +24,23 @@ function build_postbit($post, $post_type=0)
 
 	$hascustomtitle = 0;
 
+	// These will be unset when a guest is previewing a post that they're posting *as* a guest.
+	// In that case, set them to empty values to avert PHP 8 warnings re unset variables ahead.
+	if(!isset($post['userusername']))
+	{
+		$post['userusername'] = '';
+	}
+	
+	if(!isset($post['uid']))
+	{
+		$post['uid'] = 0;
+	}
+	
+	if(!isset($post['usergroup']))
+	{
+		$post['usergroup'] = 0;
+	}
+
 	// Set default values for any fields not provided here
 	foreach(array('pid', 'aid', 'pmid', 'posturl', 'button_multiquote', 'subject_extra', 'attachments', 'button_rep', 'button_warn', 'button_purgespammer', 'button_pm', 'button_reply_pm', 'button_replyall_pm', 'button_forward_pm', 'button_delete_pm', 'replink', 'warninglevel') as $post_field)
 	{
@@ -253,6 +270,8 @@ function build_postbit($post, $post_type=0)
 			$post['groupimage'] .= "<br />";
 		}
 	}
+
+	$post['profilelink_plain'] = $post['username_formatted'] = '';
 
 	if($post['userusername'])
 	{

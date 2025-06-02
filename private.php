@@ -863,7 +863,7 @@ if($mybb->input['action'] == "send")
 		else
 		{
 			// forward/reply
-			$subject = preg_replace("#(SVK|YNT):( *)#is", '', $subject);
+			$subject = preg_replace("#(FW|RE):( *)#is", '', $subject);
 			$message = "[quote='{$pm['quotename']}']\n$message\n[/quote]";
 			$message = preg_replace('#^/me (.*)$#im', "* ".$pm['quotename']." \\1", $message);
 
@@ -876,11 +876,11 @@ if($mybb->input['action'] == "send")
 
 			if($mybb->input['do'] == 'forward')
 			{
-				$subject = "Svk: $subject";
+				$subject = "Fw: $subject";
 			}
 			elseif($mybb->input['do'] == 'reply')
 			{
-				$subject = "Ynt: $subject";
+				$subject = "Re: $subject";
 				$uid = $pm['fromid'];
 				if($mybb->user['uid'] == $uid)
 				{
@@ -895,7 +895,7 @@ if($mybb->input['action'] == "send")
 			}
 			else if($mybb->input['do'] == 'replyall')
 			{
-				$subject = "Ynt: $subject";
+				$subject = "Re: $subject";
 
 				// Get list of recipients
 				$recipients = my_unserialize($pm['recipients']);
@@ -1203,7 +1203,7 @@ if($mybb->input['action'] == "read")
 			$quoted_message = remove_message_quotes($quoted_message, $mybb->settings['maxpmquotedepth']);
 		}
 
-		$subject = preg_replace("#(SVK|YNT):( *)#is", '', $pm['subject']);
+		$subject = preg_replace("#(FW|RE):( *)#is", '', $pm['subject']);
 
 		if($mybb->user['uid'] == $pm['fromid'])
 		{

@@ -5,11 +5,8 @@
  * Copyright © 2024 MyBB Pro, Tüm Hakları Saklıdır.
  * 
  * Website: https://mybb.pro
- * Lisans: https://mybb.pro/hakkimizda/lisans/
- * 
- * Support: https://mybb.pro/
- *
- * Last Update: 27.11.2024 (v1.8.38)
+ * Çeviri: Simurg
+ * Last Update: 02.06.2025
  */
 
 $l['nav_memberlist'] = "Üye Listesi";
@@ -50,7 +47,6 @@ $l['username_exact'] = "tam olarak";
 $l['search_website'] = "Website URL";
 $l['search_skype'] = "Skype Adresi";
 $l['search_google'] = "Google Hangouts Adresi";
-$l['search_icq'] = "ICQ Numarası";
 $l['search_options'] = "Arama Seçenekleri";
 $l['per_page'] = "Sayfa Başına Sonuçlar";
 $l['search'] = "Arama";
