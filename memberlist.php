@@ -67,7 +67,7 @@ if($mybb->get_input('action') == "search")
 	}
 
 	$contact_fields = array();
-	foreach(array('skype', 'google', 'icq') as $field)
+	foreach(array('skype', 'google') as $field)
 	{
 		$contact_fields[$field] = '';
 		$settingkey = 'allow'.$field.'field';
@@ -257,7 +257,7 @@ else
 	}
 
 	// Search by contact field input
-	foreach(array('icq', 'google', 'skype') as $cfield)
+	foreach(array('google', 'skype') as $cfield)
 	{
 		$csetting = 'allow'.$cfield.'field';
 		$mybb->input[$cfield] = trim($mybb->get_input($cfield));
@@ -287,14 +287,8 @@ else
 				}
 				$search_query .= ")";
 			}
-			if($cfield == 'icq')
-			{
-				$search_query .= " AND u.{$cfield} LIKE '%".(int)$mybb->input[$cfield]."%'";
-			}
-			else
-			{
-				$search_query .= " AND u.{$cfield} {$like} '%".$db->escape_string_like($mybb->input[$cfield])."%'";
-			}
+			
+			$search_query .= " AND u.{$cfield} {$like} '%".$db->escape_string_like($mybb->input[$cfield])."%'";
 			$search_url .= "&{$cfield}=".urlencode($mybb->input[$cfield]);
 		}
 	}
