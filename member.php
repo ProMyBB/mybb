@@ -22,7 +22,7 @@ $templatelist .= ",member_profile_signature,member_profile_avatar,member_profile
 $templatelist .= ",member_profile_modoptions_manageuser,member_profile_modoptions_editprofile,member_profile_modoptions_banuser,member_profile_modoptions_viewnotes,member_profile_modoptions_editnotes,member_profile_modoptions_purgespammer";
 $templatelist .= ",usercp_profile_profilefields_select_option,usercp_profile_profilefields_multiselect,usercp_profile_profilefields_select,usercp_profile_profilefields_textarea,usercp_profile_profilefields_radio,member_viewnotes";
 $templatelist .= ",member_register_question,member_register_question_refresh,usercp_options_timezone,usercp_options_timezone_option,usercp_options_language_option,member_profile_customfields_field_multi_item,member_profile_customfields_field_multi";
-$templatelist .= ",member_profile_contact_fields_google,member_profile_contact_fields_icq,member_profile_contact_fields_skype,member_profile_pm,member_profile_contact_details,member_profile_modoptions_manageban";
+$templatelist .= ",member_profile_contact_fields_google,member_profile_contact_fields_skype,member_profile_pm,member_profile_contact_details,member_profile_modoptions_manageban";
 $templatelist .= ",member_profile_banned_remaining,member_profile_addremove,member_emailuser_guest,member_register_day,usercp_options_tppselect_option,postbit_warninglevel_formatted,member_profile_userstar,member_profile_findposts";
 $templatelist .= ",usercp_options_tppselect,usercp_options_pppselect,member_resetpassword,member_login,member_profile_online,usercp_options_pppselect_option,postbit_reputation_formatted,member_emailuser,usercp_profile_profilefields_text";
 $templatelist .= ",member_profile_modoptions_ipaddress,member_profile_modoptions,member_profile_banned,member_register_language,member_resendactivation,usercp_profile_profilefields_checkbox,member_register_password,member_coppa_form";
@@ -2105,7 +2105,7 @@ if($mybb->input['action'] == "profile")
 
 	$contact_fields = array();
 	$any_contact_field = false;
-	foreach(array('icq', 'skype', 'google') as $field)
+	foreach(array('skype', 'google') as $field)
 	{
 		$contact_fields[$field] = '';
 		$settingkey = 'allow'.$field.'field';
@@ -2113,15 +2113,7 @@ if($mybb->input['action'] == "profile")
 		if(!empty($memprofile[$field]) && is_member($mybb->settings[$settingkey], array('usergroup' => $memprofile['usergroup'], 'additionalgroups' => $memprofile['additionalgroups'])))
 		{
 			$any_contact_field = true;
-
-			if($field == 'icq')
-			{
-				$memprofile[$field] = (int)$memprofile[$field];
-			}
-			else
-			{
-				$memprofile[$field] = htmlspecialchars_uni($memprofile[$field]);
-			}
+			$memprofile[$field] = htmlspecialchars_uni($memprofile[$field]);
 			$tmpl = 'member_profile_contact_fields_'.$field;
 
 			$bgcolors[$field] = alt_trow();
@@ -2762,12 +2754,8 @@ if($mybb->input['action'] == "profile")
 
 		if($mybb->usergroup['caneditprofiles'] == 1 && modcp_can_manage_user($memprofile['uid']))
 		{
-			if(modcp_can_manage_user($memprofile['uid']))
-			{
-				eval("\$editprofile = \"".$templates->get("member_profile_modoptions_editprofile")."\";");
-				eval("\$editnotes = \"".$templates->get("member_profile_modoptions_editnotes")."\";");
-		
-			}
+			eval("\$editprofile = \"".$templates->get("member_profile_modoptions_editprofile")."\";");
+			eval("\$editnotes = \"".$templates->get("member_profile_modoptions_editnotes")."\";");
 		}
 
 		if($memperms['isbannedgroup'] == 1 && $mybb->usergroup['canbanusers'] == 1 && modcp_can_manage_user($memprofile['uid']))
@@ -2776,10 +2764,7 @@ if($mybb->input['action'] == "profile")
 		}
 		elseif(modcp_can_manage_user($memprofile['uid']) && $mybb->usergroup['canbanusers'] == 1)
 		{
-			if(modcp_can_manage_user($memprofile['uid']) && $mybb->usergroup['canbanusers'] == 1)
-			{
-				eval("\$banuser = \"".$templates->get("member_profile_modoptions_banuser")."\";");
-			}
+			eval("\$banuser = \"".$templates->get("member_profile_modoptions_banuser")."\";");
 		}
 
 		$purgespammer = '';
@@ -3186,7 +3171,7 @@ if($mybb->input['action'] == 'referrals')
 	}
 
 	$user = get_user($uid);
-	if(!$user['$uid'])
+	if(!isset($user['uid']))
 	{
 		error($lang->referrals_invalid_user);
 	}
@@ -3236,6 +3221,7 @@ if($mybb->input['action'] == 'referrals')
 
 		$multipage = multipage($referral_count, $perpage, $page, "member.php?action=referrals&amp;uid={$uid}");
 
+		$referral_rows = '';
 		foreach(get_user_referrals($uid, $start, $perpage) as $referral)
 		{
 			// Format user name link
